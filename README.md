@@ -24,11 +24,11 @@ Prepared by **Dinar Wali** · RegenX · October 2026
 | `index.html` | The full report (home page of the site) |
 | `deck/` | 44-slide presentation viewer, slide images and speaker notes |
 | `atlas/` | Annotated Google Earth Pro imagery: latest, historical (~2013) and then-vs-now panels |
-| `downloads/` | Deck PDF and PPTX, Google Earth atlas PDF, `Nigeria_CO2_Hotspots.kmz`, `hotspots.csv` |
+| `downloads/` | Deck PDF, Google Earth atlas PDF, `Nigeria_CO2_Hotspots.kmz`, `hotspots.csv` |
 | `data/` | Hotspot results, satellite statistics, flare pixels, Climate TRACE facilities, view and label definitions |
 | `scripts/analysis/` | Earth Engine and Python analysis: hotspot detection, NO₂ and flare checks, imagery, maps, KMZ, report |
 | `scripts/google_earth/` | Google Earth Pro camera control, settled-frame capture and annotation |
-| `scripts/presentation/` | Slide sources and the HTML → PNG → PDF/PPTX render |
+| `scripts/presentation/` | Slide sources and the HTML → PNG → PDF render |
 
 ## Method
 
