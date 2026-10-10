@@ -1,0 +1,1129 @@
+{
+ "national_t": 126671193.31119917,
+ "threshold_t": 3299.7473661899567,
+ "k50": 4425,
+ "land_km2": 772324,
+ "sector_share": {
+  "Energy": 0.1249289930363046,
+  "Industry": 0.35128245655703794,
+  "Transport": 0.479313855803314,
+  "Residential": 0.03558861429400373,
+  "Agriculture": 0.008885858696817382,
+  "Waste": 2.2161252182830086e-07
+ },
+ "coarse_Mt": {
+  "2005": 87.03813171386719,
+  "2015": 113.3095703125,
+  "2025": 137.60064697265625
+ },
+ "hotspots": [
+  {
+   "id": 109,
+   "emis_t": 12235144.502535777,
+   "area_km2": 962,
+   "lat": 6.641783303902688,
+   "lon": 3.3318996319584993,
+   "bbox": [
+    3.04,
+    6.3999999999999995,
+    3.7,
+    7.029999999999999
+   ],
+   "peak_t": 199625.31856131554,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.07890364830740473,
+    "Industry": 0.6769475420150443,
+    "Transport": 0.22559207785662852,
+    "Residential": 0.0184377431996857,
+    "Agriculture": 0.00011898862123687037,
+    "Waste": 0.0
+   },
+   "state": "Lagos",
+   "share": 0.0965897942753023,
+   "trend_Mt": {
+    "2005": 10.347607612609863,
+    "2015": 17.530689239501953,
+    "2025": 18.849637985229492
+   },
+   "facilities": [
+    {
+     "name": "Dangote Cement Ojibawo Cement Plant",
+     "sector": "cement",
+     "lon": 3.04985145249704,
+     "lat": 7.00598219879176,
+     "co2_t": 2193699.669776447
+    },
+    {
+     "name": "Egbin power station",
+     "sector": "electricity-generation",
+     "lon": 3.6151,
+     "lat": 6.5637,
+     "co2_t": 2058100
+    },
+    {
+     "name": "Lafarge Africa Ewekoro Cement Plant",
+     "sector": "cement",
+     "lon": 3.20350102637138,
+     "lat": 6.89522723271791,
+     "co2_t": 989929.5161759505
+    },
+    {
+     "name": "Lagos",
+     "sector": "international-shipping",
+     "lon": 3.383544,
+     "lat": 6.480975,
+     "co2_t": 792785.5827115822
+    },
+    {
+     "name": "Murtala Muhammed International Airport",
+     "sector": "international-aviation",
+     "lon": 3.32116,
+     "lat": 6.57737,
+     "co2_t": 748646.2642131426
+    },
+    {
+     "name": "Olorunsogo II power station",
+     "sector": "electricity-generation",
+     "lon": 3.3163,
+     "lat": 6.8853,
+     "co2_t": 450970
+    }
+   ]
+  },
+  {
+   "id": 195,
+   "emis_t": 9327071.53637622,
+   "area_km2": 616,
+   "lat": 4.835111258432151,
+   "lon": 7.1935542943236195,
+   "bbox": [
+    6.7700000000000005,
+    4.63,
+    8.030000000000001,
+    5.569999999999999
+   ],
+   "peak_t": 281189.6165509224,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.09982414202196951,
+    "Industry": 0.6931939237473722,
+    "Transport": 0.19338591062495633,
+    "Residential": 0.013333878384249868,
+    "Agriculture": 0.00026214522145207925,
+    "Waste": 0.0
+   },
+   "state": "Rivers",
+   "share": 0.07363214391974628,
+   "trend_Mt": {
+    "2005": 8.880598068237305,
+    "2015": 11.842473983764648,
+    "2025": 16.567636489868164
+   },
+   "facilities": [
+    {
+     "name": "Nigeria_Niger Delta_Conventional shelf",
+     "sector": "oil-and-gas-production",
+     "lon": 6.727302,
+     "lat": 4.591181,
+     "co2_t": 5170162.6627
+    },
+    {
+     "name": "Port Harcourt Fertilizer Complex",
+     "sector": "chemicals",
+     "lon": 7.1029183,
+     "lat": 4.8354765,
+     "co2_t": 3150985.915492957
+    },
+    {
+     "name": "Nigeria_Niger Delta_Conventional shelf",
+     "sector": "oil-and-gas-transport",
+     "lon": 6.727302,
+     "lat": 4.591181,
+     "co2_t": 1874651.4
+    },
+    {
+     "name": "Onne (Port Harcourt) Fertilizer Complex",
+     "sector": "chemicals",
+     "lon": 7.012544,
+     "lat": 4.7744893,
+     "co2_t": 1643014.0845070416
+    },
+    {
+     "name": "Afam V power station",
+     "sector": "electricity-generation",
+     "lon": 7.2535,
+     "lat": 4.8518,
+     "co2_t": 1050760
+    },
+    {
+     "name": "Afam VI power station",
+     "sector": "electricity-generation",
+     "lon": 7.2569,
+     "lat": 4.8495,
+     "co2_t": 793800
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "emis_t": 6128428.500630559,
+   "area_km2": 100,
+   "lat": 7.949725244708341,
+   "lon": 6.449697723181624,
+   "bbox": [
+    6.4,
+    7.8999999999999995,
+    6.5,
+    7.999999999999999
+   ],
+   "peak_t": 85281.30996966362,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.0,
+    "Industry": 0.9991739265816614,
+    "Transport": 0.0006831571124858279,
+    "Residential": 0.00012590669146161478,
+    "Agriculture": 1.700961439120754e-05,
+    "Waste": 0.0
+   },
+   "state": "Kogi",
+   "share": 0.04838060130668033,
+   "trend_Mt": {
+    "2005": 0.6797232031822205,
+    "2015": 4.447834014892578,
+    "2025": 6.524877071380615
+   },
+   "facilities": [
+    {
+     "name": "Dangote Cement Obajana Cement Plant",
+     "sector": "cement",
+     "lon": 6.42192499509181,
+     "lat": 7.92917627642587,
+     "co2_t": 3870190.225521904
+    },
+    {
+     "name": "Obajana Cement power station",
+     "sector": "electricity-generation",
+     "lon": 6.4295,
+     "lat": 7.9229,
+     "co2_t": 0
+    }
+   ]
+  },
+  {
+   "id": 252,
+   "emis_t": 5386173.078509944,
+   "area_km2": 100,
+   "lat": 4.448562867951521,
+   "lon": 7.150605918283819,
+   "bbox": [
+    7.1000000000000005,
+    4.3999999999999995,
+    7.2,
+    4.499999999999999
+   ],
+   "peak_t": 276089.54691267014,
+   "dominant": "Energy",
+   "sectors": {
+    "Energy": 0.9495018670930013,
+    "Industry": 0.04646812039381678,
+    "Transport": 0.0029018518723909793,
+    "Residential": 0.001105172773260631,
+    "Agriculture": 2.2987867530380312e-05,
+    "Waste": 0.0
+   },
+   "state": "Rivers",
+   "share": 0.04252089948562713,
+   "trend_Mt": {
+    "2005": 2.365391254425049,
+    "2015": 4.369235038757324,
+    "2025": 7.012012004852295
+   },
+   "facilities": [
+    {
+     "name": "Bonny",
+     "sector": "international-shipping",
+     "lon": 7.154544,
+     "lat": 4.432047,
+     "co2_t": 1166828.86208195
+    },
+    {
+     "name": "Bonny Island LNG power plant",
+     "sector": "electricity-generation",
+     "lon": 7.1616,
+     "lat": 4.4184,
+     "co2_t": 589110
+    },
+    {
+     "name": "Bonny",
+     "sector": "domestic-shipping",
+     "lon": 7.154544,
+     "lat": 4.432047,
+     "co2_t": 162983.1137933363
+    },
+    {
+     "name": "BONNY ISLAND TERMINAL",
+     "sector": "electricity-generation",
+     "lon": 7.1556,
+     "lat": 4.42,
+     "co2_t": 144770
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "emis_t": 2296188.8069574684,
+   "area_km2": 310,
+   "lat": 11.979599534285523,
+   "lon": 8.526347763878054,
+   "bbox": [
+    8.229999999999999,
+    11.629999999999999,
+    8.860000000000001,
+    12.35
+   ],
+   "peak_t": 35041.73962748051,
+   "dominant": "Transport",
+   "sectors": {
+    "Energy": 0.09293141213510302,
+    "Industry": 0.3001788749767368,
+    "Transport": 0.5621702173507894,
+    "Residential": 0.044511660860127686,
+    "Agriculture": 0.00020783467724304228,
+    "Waste": 0.0
+   },
+   "state": "Kano",
+   "share": 0.01812715856648095,
+   "trend_Mt": {
+    "2005": 2.3403003215789795,
+    "2015": 3.4007256031036377,
+    "2025": 4.103414058685303
+   },
+   "facilities": [
+    {
+     "name": "Mallam Aminu Kano International Airport",
+     "sector": "international-aviation",
+     "lon": 8.523566,
+     "lat": 12.045613,
+     "co2_t": 57383.03265405828
+    },
+    {
+     "name": "Mallam Aminu Kano International Airport",
+     "sector": "domestic-aviation",
+     "lon": 8.523566,
+     "lat": 12.045613,
+     "co2_t": 34144.576549172954
+    },
+    {
+     "name": "Ibb Road, Police Barrack, Fagge D2",
+     "sector": "solid-waste-disposal",
+     "lon": 8.518728585585752,
+     "lat": 12.013344862735226,
+     "co2_t": 0
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "emis_t": 1981343.2399651867,
+   "area_km2": 101,
+   "lat": 7.047504246454997,
+   "lon": 3.0500193609206105,
+   "bbox": [
+    3.0,
+    6.989999999999999,
+    3.0999999999999996,
+    7.099999999999999
+   ],
+   "peak_t": 62133.7053548102,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.0003857893413405017,
+    "Industry": 0.9953125940548608,
+    "Transport": 0.003953222936383703,
+    "Residential": 0.00025847915628205787,
+    "Agriculture": 8.991451113299592e-05,
+    "Waste": 0.0
+   },
+   "state": "Ogun",
+   "share": 0.01564162449387783,
+   "trend_Mt": {
+    "2005": 0.25667816400527954,
+    "2015": 1.5799744129180908,
+    "2025": 2.277444362640381
+   },
+   "facilities": [
+    {
+     "name": "Dangote Cement Ojibawo Cement Plant",
+     "sector": "cement",
+     "lon": 3.04985145249704,
+     "lat": 7.00598219879176,
+     "co2_t": 2193699.669776447
+    },
+    {
+     "name": "Ibese Cement power station",
+     "sector": "electricity-generation",
+     "lon": 3.0509,
+     "lat": 7.0092,
+     "co2_t": 16988
+    }
+   ]
+  },
+  {
+   "id": 192,
+   "emis_t": 1744925.993339762,
+   "area_km2": 113,
+   "lat": 5.528911850834711,
+   "lon": 5.857610963900909,
+   "bbox": [
+    5.680000000000001,
+    5.47,
+    6.14,
+    5.599999999999999
+   ],
+   "peak_t": 361554.7443885803,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.2721342684468483,
+    "Industry": 0.5549788610949677,
+    "Transport": 0.1596995846464316,
+    "Residential": 0.013031402793438913,
+    "Agriculture": 0.00015588301831348958,
+    "Waste": 0.0
+   },
+   "state": "Delta",
+   "share": 0.013775239245223806,
+   "trend_Mt": {
+    "2005": 3.1914467811584473,
+    "2015": 2.5026912689208984,
+    "2025": 2.6482975482940674
+   },
+   "facilities": [
+    {
+     "name": "Ughelli power station",
+     "sector": "electricity-generation",
+     "lon": 5.9151,
+     "lat": 5.5399,
+     "co2_t": 1808100
+    },
+    {
+     "name": "NNPC Warri Refinery",
+     "sector": "oil-and-gas-refining",
+     "lon": 5.71685,
+     "lat": 5.5679,
+     "co2_t": 75887.7702099999
+    },
+    {
+     "name": "Warri Oil Terminal",
+     "sector": "domestic-shipping",
+     "lon": 5.685568,
+     "lat": 5.536586,
+     "co2_t": 37857.48925041477
+    },
+    {
+     "name": "Warri",
+     "sector": "international-shipping",
+     "lon": 5.729437,
+     "lat": 5.514858,
+     "co2_t": 15921.130854845047
+    },
+    {
+     "name": "Warri Oil Terminal",
+     "sector": "international-shipping",
+     "lon": 5.685568,
+     "lat": 5.536586,
+     "co2_t": 6293.475170264042
+    },
+    {
+     "name": "Warri",
+     "sector": "domestic-shipping",
+     "lon": 5.729437,
+     "lat": 5.514858,
+     "co2_t": 6149.923287232106
+    }
+   ]
+  },
+  {
+   "id": 92,
+   "emis_t": 1708117.5374126215,
+   "area_km2": 100,
+   "lat": 7.4499414012821505,
+   "lon": 8.950084728375012,
+   "bbox": [
+    8.899999999999999,
+    7.3999999999999995,
+    9.000000000000002,
+    7.499999999999999
+   ],
+   "peak_t": 19434.76345562935,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.0,
+    "Industry": 0.9905738300731866,
+    "Transport": 0.008989081338088343,
+    "Residential": 0.00031988018414705696,
+    "Agriculture": 0.00011720840457804165,
+    "Waste": 0.0
+   },
+   "state": "Benue",
+   "share": 0.013484656556571687,
+   "trend_Mt": {
+    "2005": 0.2442808747291565,
+    "2015": 1.3081296682357788,
+    "2025": 1.913456678390503
+   },
+   "facilities": [
+    {
+     "name": "Dangote Cement Gboko Cement Plant",
+     "sector": "cement",
+     "lon": 8.97374555190278,
+     "lat": 7.41078521840216,
+     "co2_t": 1181917.285422697
+    },
+    {
+     "name": "Gboko Cement power station",
+     "sector": "electricity-generation",
+     "lon": 8.9739,
+     "lat": 7.4108,
+     "co2_t": 0
+    }
+   ]
+  },
+  {
+   "id": 219,
+   "emis_t": 1560435.205072208,
+   "area_km2": 100,
+   "lat": 5.050389289405107,
+   "lon": 8.549088726968154,
+   "bbox": [
+    8.5,
+    4.999999999999999,
+    8.600000000000001,
+    5.099999999999999
+   ],
+   "peak_t": 34300.66743803024,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.0,
+    "Industry": 0.9978356373661944,
+    "Transport": 0.0016904975579422276,
+    "Residential": 0.00011023932263814722,
+    "Agriculture": 0.00036362575322525627,
+    "Waste": 0.0
+   },
+   "state": "Cross River",
+   "share": 0.012318785070877263,
+   "trend_Mt": {
+    "2005": 0.18185214698314667,
+    "2015": 1.1526602506637573,
+    "2025": 1.6744613647460938
+   },
+   "facilities": [
+    {
+     "name": "Lafarge Africa Mfamosing Cement Plant",
+     "sector": "cement",
+     "lon": 8.514936041195,
+     "lat": 5.06433623684427,
+     "co2_t": 1132692.3311811443
+    }
+   ]
+  },
+  {
+   "id": 145,
+   "emis_t": 1399814.031840216,
+   "area_km2": 107,
+   "lat": 5.930418664849238,
+   "lon": 5.63878449830595,
+   "bbox": [
+    5.55,
+    5.839999999999999,
+    5.739999999999999,
+    6.039999999999999
+   ],
+   "peak_t": 409780.465641737,
+   "dominant": "Energy",
+   "sectors": {
+    "Energy": 0.6479799010999577,
+    "Industry": 0.3153967845608706,
+    "Transport": 0.03305697648507622,
+    "Residential": 0.003322466428804298,
+    "Agriculture": 0.00024387142529112314,
+    "Waste": 0.0
+   },
+   "state": "Delta",
+   "share": 0.011050768491627184,
+   "trend_Mt": {
+    "2005": 2.9421908855438232,
+    "2015": 2.7557249069213867,
+    "2025": 1.876599669456482
+   },
+   "facilities": [
+    {
+     "name": "Sapele power station",
+     "sector": "electricity-generation",
+     "lon": 5.645,
+     "lat": 5.9261,
+     "co2_t": 1346700
+    },
+    {
+     "name": "Edo Modular Refinery",
+     "sector": "oil-and-gas-refining",
+     "lon": 5.668318,
+     "lat": 6.078189,
+     "co2_t": 78399.76971999959
+    },
+    {
+     "name": "Sapele",
+     "sector": "international-shipping",
+     "lon": 5.677494,
+     "lat": 5.906245,
+     "co2_t": 4025.5198781490326
+    },
+    {
+     "name": "Sapele",
+     "sector": "domestic-shipping",
+     "lon": 5.677494,
+     "lat": 5.906245,
+     "co2_t": 1393.9575943909854
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "emis_t": 1358551.6448245868,
+   "area_km2": 155,
+   "lat": 10.503200004798721,
+   "lon": 7.437732957346051,
+   "bbox": [
+    7.3500000000000005,
+    10.399999999999999,
+    7.510000000000001,
+    10.62
+   ],
+   "peak_t": 59249.838031060994,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.32669658262774903,
+    "Industry": 0.48896810345744607,
+    "Transport": 0.1648694871519444,
+    "Residential": 0.019444829343635377,
+    "Agriculture": 2.0997419225112367e-05,
+    "Waste": 0.0
+   },
+   "state": "Kaduna",
+   "share": 0.010725024445668306,
+   "trend_Mt": {
+    "2005": 1.6567671298980713,
+    "2015": 1.7677665948867798,
+    "2025": 1.8460044860839844
+   },
+   "facilities": [
+    {
+     "name": "Kaduna International Airport",
+     "sector": "domestic-aviation",
+     "lon": 7.32011,
+     "lat": 10.696,
+     "co2_t": 2341.7541188925243
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "emis_t": 1105004.093199104,
+   "area_km2": 25,
+   "lat": 7.505261960814656,
+   "lon": 6.676967437292036,
+   "bbox": [
+    6.61,
+    7.429999999999999,
+    6.71,
+    7.579999999999999
+   ],
+   "peak_t": 563389.8139814436,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.33748511312463503,
+    "Industry": 0.6516458289619624,
+    "Transport": 0.009398184423927614,
+    "Residential": 0.0014571615642602416,
+    "Agriculture": 1.3711925214664673e-05,
+    "Waste": 0.0
+   },
+   "state": "Kogi",
+   "share": 0.008723404779841204,
+   "trend_Mt": {
+    "2005": 0.8880541324615479,
+    "2015": 2.237619638442993,
+    "2025": 1.3678374290466309
+   },
+   "facilities": [
+    {
+     "name": "Geregu II power station",
+     "sector": "electricity-generation",
+     "lon": 6.6602,
+     "lat": 7.4717,
+     "co2_t": 646250
+    },
+    {
+     "name": "Geregu I power station",
+     "sector": "electricity-generation",
+     "lon": 6.659,
+     "lat": 7.4696,
+     "co2_t": 576010
+    }
+   ]
+  },
+  {
+   "id": 136,
+   "emis_t": 1081157.6184702888,
+   "area_km2": 193,
+   "lat": 6.074265220189484,
+   "lon": 6.861387416526384,
+   "bbox": [
+    6.6499999999999995,
+    5.63,
+    7.2,
+    6.269999999999999
+   ],
+   "peak_t": 26656.176560640335,
+   "dominant": "Transport",
+   "sectors": {
+    "Energy": 0.05468093568884449,
+    "Industry": 0.11910326176450786,
+    "Transport": 0.7896060363473908,
+    "Residential": 0.035806312950725165,
+    "Agriculture": 0.0008034532485316638,
+    "Waste": 0.0
+   },
+   "state": "Anambra",
+   "share": 0.00853514986484857,
+   "trend_Mt": {
+    "2005": 3.5901639461517334,
+    "2015": 3.173391342163086,
+    "2025": 4.043903350830078
+   },
+   "facilities": [
+    {
+     "name": "Oando Kwale power station",
+     "sector": "electricity-generation",
+     "lon": 6.5759,
+     "lat": 5.7097,
+     "co2_t": 831710
+    },
+    {
+     "name": "Asaba International Airport",
+     "sector": "domestic-aviation",
+     "lon": 6.665278,
+     "lat": 6.204167,
+     "co2_t": 10776.890638245017
+    },
+    {
+     "name": "Onitsha - Owerri Road, Onitsha, Onitsha North",
+     "sector": "solid-waste-disposal",
+     "lon": 6.79902286425814,
+     "lat": 6.103317869803795,
+     "co2_t": 0
+    },
+    {
+     "name": "Ughoru, Oshimili North, Delta",
+     "sector": "solid-waste-disposal",
+     "lon": 6.655763258008257,
+     "lat": 6.189372061646917,
+     "co2_t": 0
+    },
+    {
+     "name": "Onitsha, Onitsha North, Anambra",
+     "sector": "solid-waste-disposal",
+     "lon": 6.774024060312778,
+     "lat": 6.156938538133304,
+     "co2_t": 0
+    },
+    {
+     "name": "Nnewi, Nnewi North, Anambra",
+     "sector": "solid-waste-disposal",
+     "lon": 6.90687095173373,
+     "lat": 6.012197084367163,
+     "co2_t": 0
+    }
+   ]
+  },
+  {
+   "id": 220,
+   "emis_t": 837389.1661222036,
+   "area_km2": 118,
+   "lat": 4.968796963541366,
+   "lon": 8.343839632352276,
+   "bbox": [
+    8.299999999999999,
+    4.8999999999999995,
+    8.4,
+    5.079999999999999
+   ],
+   "peak_t": 35590.277448654175,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.4116499763963329,
+    "Industry": 0.4969812670463309,
+    "Transport": 0.0799730947018142,
+    "Residential": 0.010907729907272594,
+    "Agriculture": 0.0004879319482494414,
+    "Waste": 0.0
+   },
+   "state": "Cross River",
+   "share": 0.006610730855475164,
+   "trend_Mt": {
+    "2005": 0.2994360625743866,
+    "2015": 0.6813725829124451,
+    "2025": 0.9804562926292419
+   },
+   "facilities": [
+    {
+     "name": "Esuk Utan",
+     "sector": "international-shipping",
+     "lon": 8.319429,
+     "lat": 5.011716,
+     "co2_t": 24521.14138425514
+    },
+    {
+     "name": "Esuk Utan",
+     "sector": "domestic-shipping",
+     "lon": 8.319429,
+     "lat": 5.011716,
+     "co2_t": 19079.772361695766
+    },
+    {
+     "name": "Margaret Ekpo International Airport",
+     "sector": "domestic-aviation",
+     "lon": 8.347200393676758,
+     "lat": 4.976019859313965,
+     "co2_t": 7260.046233923535
+    },
+    {
+     "name": "Calabar",
+     "sector": "domestic-shipping",
+     "lon": 8.316665,
+     "lat": 4.966665,
+     "co2_t": 4875.247310705118
+    },
+    {
+     "name": "Unknown name",
+     "sector": "domestic-shipping",
+     "lon": 8.2846,
+     "lat": 4.9291,
+     "co2_t": 671.1922449469566
+    },
+    {
+     "name": "Calabar",
+     "sector": "international-shipping",
+     "lon": 8.316665,
+     "lat": 4.966665,
+     "co2_t": 566.8508139099152
+    }
+   ]
+  },
+  {
+   "id": 131,
+   "emis_t": 793083.8609017134,
+   "area_km2": 52,
+   "lat": 6.378241495785889,
+   "lon": 5.656399702987393,
+   "bbox": [
+    5.58,
+    6.249999999999999,
+    5.7,
+    6.419999999999999
+   ],
+   "peak_t": 266482.3856508732,
+   "dominant": "Energy",
+   "sectors": {
+    "Energy": 0.733073064736035,
+    "Industry": 0.08829763828674028,
+    "Transport": 0.16807645973756125,
+    "Residential": 0.01033313135071074,
+    "Agriculture": 0.0002197058889528107,
+    "Waste": 0.0
+   },
+   "state": "Edo",
+   "share": 0.006260964629529513,
+   "trend_Mt": {
+    "2005": 0.42929285764694214,
+    "2015": 1.1343637704849243,
+    "2025": 1.2981635332107544
+   },
+   "facilities": [
+    {
+     "name": "Azura-Edo IPP power station",
+     "sector": "electricity-generation",
+     "lon": 5.6806,
+     "lat": 6.4099,
+     "co2_t": 2121600
+    },
+    {
+     "name": "Ihovbor power station",
+     "sector": "electricity-generation",
+     "lon": 5.6829,
+     "lat": 6.4068,
+     "co2_t": 595670
+    },
+    {
+     "name": "Benin Airport",
+     "sector": "domestic-aviation",
+     "lon": 5.5995001792907715,
+     "lat": 6.316979885101318,
+     "co2_t": 10028.661246206904
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "emis_t": 693103.4988541603,
+   "area_km2": 1,
+   "lat": 9.495,
+   "lon": 7.695000000000001,
+   "bbox": [
+    7.69,
+    9.489999999999998,
+    7.7,
+    9.5
+   ],
+   "peak_t": 693103.4988541603,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.0,
+    "Industry": 0.9989678686439428,
+    "Transport": 0.0006283635363205867,
+    "Residential": 0.00040358150744477877,
+    "Agriculture": 1.8631229179761308e-07,
+    "Waste": 0.0
+   },
+   "state": "Kaduna",
+   "share": 0.005471674188395619,
+   "trend_Mt": {
+    "2005": 0.01650240086019039,
+    "2015": 0.02204350009560585,
+    "2025": 0.7022066712379456
+   },
+   "facilities": []
+  },
+  {
+   "id": 214,
+   "emis_t": 691182.0195747167,
+   "area_km2": 57,
+   "lat": 5.115238401985345,
+   "lon": 6.488440338202058,
+   "bbox": [
+    6.260000000000001,
+    4.89,
+    6.7299999999999995,
+    5.259999999999999
+   ],
+   "peak_t": 185798.82469129562,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.12442486219762823,
+    "Industry": 0.6195969921542679,
+    "Transport": 0.2475164865520738,
+    "Residential": 0.008355867364319262,
+    "Agriculture": 0.00010579173171084128,
+    "Waste": 0.0
+   },
+   "state": "Rivers",
+   "share": 0.0054565051572274745,
+   "trend_Mt": {
+    "2005": 3.2875630855560303,
+    "2015": 1.833537220954895,
+    "2025": 1.8570464849472046
+   },
+   "facilities": [
+    {
+     "name": "Nigeria_Niger Delta_Conventional onshore",
+     "sector": "oil-and-gas-production",
+     "lon": 6.431772,
+     "lat": 5.287511,
+     "co2_t": 9523413.147299998
+    },
+    {
+     "name": "Nigeria_Niger Delta_Conventional onshore",
+     "sector": "oil-and-gas-transport",
+     "lon": 6.431772,
+     "lat": 5.287511,
+     "co2_t": 2215755.6533999997
+    },
+    {
+     "name": "Gbarain Gas power station",
+     "sector": "electricity-generation",
+     "lon": 6.3016,
+     "lat": 5.0311,
+     "co2_t": 322360
+    },
+    {
+     "name": "Aradel Modular Refinery",
+     "sector": "oil-and-gas-refining",
+     "lon": 6.654867,
+     "lat": 4.927519,
+     "co2_t": 47910.97038
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "emis_t": 688689.2726411,
+   "area_km2": 122,
+   "lat": 9.077634232871677,
+   "lon": 7.399357035517336,
+   "bbox": [
+    7.14,
+    8.94,
+    7.62,
+    9.28
+   ],
+   "peak_t": 16425.955987215042,
+   "dominant": "Transport",
+   "sectors": {
+    "Energy": 0.0,
+    "Industry": 0.4843350292306419,
+    "Transport": 0.49537503549193884,
+    "Residential": 0.02016866741464138,
+    "Agriculture": 0.00012126786277786124,
+    "Waste": 0.0
+   },
+   "state": "Abuja",
+   "share": 0.005436826279430116,
+   "trend_Mt": {
+    "2005": 0.979347288608551,
+    "2015": 1.4724881649017334,
+    "2025": 1.7622859477996826
+   },
+   "facilities": [
+    {
+     "name": "Nnamdi Azikiwe International Airport",
+     "sector": "international-aviation",
+     "lon": 7.26317,
+     "lat": 9.00679,
+     "co2_t": 209789.22258803374
+    },
+    {
+     "name": "Nnamdi Azikiwe International Airport",
+     "sector": "domestic-aviation",
+     "lon": 7.26317,
+     "lat": 9.00679,
+     "co2_t": 170701.8484320777
+    },
+    {
+     "name": "Zuma Coal Mining Project",
+     "sector": "coal-mining",
+     "lon": 7.452343,
+     "lat": 9.0108087,
+     "co2_t": 46701.555527760196
+    },
+    {
+     "name": "Municipal Area Council, Federal Capital Territory, Nigeria",
+     "sector": "solid-waste-disposal",
+     "lon": 7.339278294931075,
+     "lat": 9.02844549266579,
+     "co2_t": 0
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "emis_t": 628440.9663005471,
+   "area_km2": 117,
+   "lat": 7.393769931222692,
+   "lon": 3.93521357079961,
+   "bbox": [
+    3.8,
+    7.279999999999999,
+    4.18,
+    7.669999999999999
+   ],
+   "peak_t": 16805.430922031403,
+   "dominant": "Transport",
+   "sectors": {
+    "Energy": 0.07380274783651583,
+    "Industry": 0.03753201206218705,
+    "Transport": 0.8332162716476711,
+    "Residential": 0.05517663230535162,
+    "Agriculture": 0.0002723361482744377,
+    "Waste": 0.0
+   },
+   "state": "Oyo",
+   "share": 0.004961198753031608,
+   "trend_Mt": {
+    "2005": 0.8378917574882507,
+    "2015": 1.1615159511566162,
+    "2025": 1.4434449672698975
+   },
+   "facilities": [
+    {
+     "name": "Ibadan Airport",
+     "sector": "domestic-aviation",
+     "lon": 3.97832989692688,
+     "lat": 7.362460136413574,
+     "co2_t": 3641.4080444670385
+    },
+    {
+     "name": "Awotan (Apete) Dumpsite",
+     "sector": "solid-waste-disposal",
+     "lon": 3.84910556,
+     "lat": 7.463069444,
+     "co2_t": 0
+    },
+    {
+     "name": "Lapite",
+     "sector": "solid-waste-disposal",
+     "lon": 3.912607472144356,
+     "lat": 7.569898142051196,
+     "co2_t": 0
+    },
+    {
+     "name": "Ajakanga Dumpsite",
+     "sector": "solid-waste-disposal",
+     "lon": 3.84063888889,
+     "lat": 7.31251111111,
+     "co2_t": 0
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "emis_t": 548291.3321293939,
+   "area_km2": 100,
+   "lat": 10.9491241925594,
+   "lon": 11.45115210562101,
+   "bbox": [
+    11.4,
+    10.899999999999999,
+    11.500000000000002,
+    11.0
+   ],
+   "peak_t": 10649.03921367228,
+   "dominant": "Industry",
+   "sectors": {
+    "Energy": 0.0,
+    "Industry": 0.9785030222934933,
+    "Transport": 0.018409128677173807,
+    "Residential": 0.0030479470485524187,
+    "Agriculture": 3.990198078057175e-05,
+    "Waste": 0.0
+   },
+   "state": "Gombe",
+   "share": 0.0043284610951945515,
+   "trend_Mt": {
+    "2005": 0.13263365626335144,
+    "2015": 0.4806142747402191,
+    "2025": 0.6672983169555664
+   },
+   "facilities": [
+    {
+     "name": "Lafarge Africa Ashaka Cement Plant",
+     "sector": "cement",
+     "lon": 11.4758286448503,
+     "lat": 10.9310027949163,
+     "co2_t": 260898.0047900119
+    }
+   ]
+  }
+ ]
+}

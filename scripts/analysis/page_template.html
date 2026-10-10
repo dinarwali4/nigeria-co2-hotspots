@@ -1,0 +1,156 @@
+<title>Nigeria CO₂ Hotspots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single reading column (~72ch) that widens for maps, chart and the hotspot atlas strips. */
+:root{
+  --bg:#f7f7f4; --surface:#ffffff; --ink:#15181c; --ink-2:#4b5058; --ink-3:#7a7f87; --rule:#dcdcd5;
+  --accent:#c2410c;           /* flare orange */
+  --s1:#2a78d6; --s2:#eb6834; /* EDGAR blue, Climate TRACE orange */
+  --bad-bg:#fbe9e7; --bad-ink:#9f1d1d;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b9bec6; --ink-3:#8b919a; --rule:#2e3238;
+  --accent:#f0773c; --s1:#3987e5; --s2:#d95926; --bad-bg:#3a1d1b; --bad-ink:#ffb4a8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b9bec6; --ink-3:#8b919a; --rule:#2e3238;
+  --accent:#f0773c; --s1:#3987e5; --s2:#d95926; --bad-bg:#3a1d1b; --bad-ink:#ffb4a8; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:40px 80px}
+.col{max-width:72ch}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.01em}
+h2{font-size:1.75rem;margin-top:64px;margin-bottom:12px}
+h3{font-size:1.25rem}
+p{margin:0 0 14px}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.lede{font-size:1.15rem;color:var(--ink-2);margin-top:16px}
+.byline{font:.8rem var(--mono);color:var(--ink-3);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:36px 0 8px;border-top:1px solid var(--rule);padding-top:22px}
+.stat b{display:block;font:600 2.3rem/1 var(--display);font-variant-numeric:tabular-nums}
+.stat span{display:block;color:var(--ink-2);font-size:.9rem;margin-top:6px}
+ul.find{padding-left:1.1rem;margin:0}
+ul.find li{margin-bottom:10px}
+figure{margin:0}
+.map{margin-top:20px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:10px}
+.map img{display:block;width:100%;height:auto;border-radius:3px}
+.map figcaption,.note{font-size:.82rem;color:var(--ink-3);margin-top:8px}
+.chart{overflow-x:auto;margin-top:14px}
+.rank{width:100%;min-width:620px;height:auto;font-family:var(--body)}
+.rank .grid{stroke:var(--rule);stroke-width:1}
+.rank .tick{fill:var(--ink-3);font:11px var(--mono)}
+.rank .lab{fill:var(--ink);font-size:12px}
+.rank .val{fill:var(--ink-2);font:11px var(--mono)}
+.rank .muted{fill:var(--ink-3)}
+.rank .s1{fill:var(--s1)} .rank .s2{fill:var(--s2)}
+.rank .bar:hover rect:first-child{opacity:.8}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.85rem;color:var(--ink-2);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px}
+.spot{border-top:1px solid var(--rule);padding-top:26px;margin-top:34px}
+.spot header{display:flex;gap:14px;align-items:baseline}
+.hid{font:500 .85rem var(--mono);color:var(--accent);min-width:2.6em}
+.where{font-size:.85rem;color:var(--ink-3);margin:4px 0 0}
+.pill{display:inline-block;font:500 .72rem var(--mono);padding:2px 8px;border-radius:99px;border:1px solid var(--rule);color:var(--ink-2)}
+.pill.bad{background:var(--bad-bg);color:var(--bad-ink);border-color:transparent}
+.story{max-width:78ch;margin-top:12px;color:var(--ink-2)}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:8px}
+.strip img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:3px;background:var(--rule)}
+.strip figcaption{font:.7rem/1.3 var(--mono);color:var(--ink-3);margin-top:4px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 24px;margin:16px 0 0}
+.fact{min-width:0}
+.fact dt{font:.7rem var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+.fact dd{margin:2px 0 0;font-variant-numeric:tabular-nums;font-size:.92rem}
+.muted{color:var(--ink-3)}
+.rejected .strip{opacity:.75}
+.tbl{overflow-x:auto;margin-top:14px;border:1px solid var(--rule);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:.84rem}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--rule)}
+th{font:500 .7rem var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);background:var(--surface)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.cols>div{min-width:0}
+code{font-family:var(--mono);font-size:.85em;background:var(--surface);padding:1px 5px;border-radius:3px;border:1px solid var(--rule)}
+a{color:var(--accent)}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font:.8rem var(--mono);margin-top:22px}
+nav.toc a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule)}
+@media (max-width:720px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}.strip figure:nth-child(n+4){display:none}}
+</style>
+
+<div class="wrap">
+<div class="col">
+  <div class="eyebrow">RegenX geospatial · Nigeria · October 2026</div>
+  <h1>Nigeria CO₂ Hotspots</h1>
+  <p class="lede">Where Nigeria's fossil carbon dioxide comes from, checked from orbit. I combined the EDGAR 2025 emission grid, Climate TRACE facility estimates, MODIS gas-flare persistence, Sentinel-5P NO₂ and AlphaEarth embeddings. Each site has imagery from 2000–02, 2016–17 and 2025–26.</p>
+  <p class="byline">Dinar Wali · analysis in Google Earth Engine + Python · data to Sep 2026</p>
+  <nav class="toc"><a href="#findings">Findings</a><a href="#map">Map</a><a href="#ranking">Ranking</a><a href="#flaring">Gas flaring</a><a href="#atlas">Hotspot atlas</a><a href="#table">EDGAR top 20</a><a href="#method">Method</a><a href="#earth">Google Earth</a></nav>
+</div>
+
+<div class="stats">
+  <div class="stat"><b>{{NAT2025}} Mt</b><span>fossil CO₂ in 2025 (EDGAR), up {{GROWTH}} from {{NAT2005}} Mt in 2005</span></div>
+  <div class="stat"><b>{{LANDPCT}}</b><span>of Nigeria's land ({{K50}} km²) emits half of all fossil CO₂</span></div>
+  <div class="stat"><b>15</b><span>verified hotspots: 9 industrial, 2 urban, 2 power, 2 gas-flare. 1 more candidate rejected</span></div>
+</div>
+
+<section id="findings" class="col">
+  <h2>Findings</h2>
+  <ul class="find">
+    <li><b>Two coastal clusters dominate.</b> Lagos (12.2 Mt, 9.7%) and Port Harcourt–Onne–Eleme (9.3 Mt, 7.4%) together emit one sixth of the national total. Bonny Island LNG adds 5.4 Mt from only 100 km².</li>
+    <li><b>Cement is the fastest-growing source.</b> Six cement works make the list (Obajana, Okpotu, Ibese, Sokoto, Gboko, Mfamosing). None existed in the 2000–02 Landsat frames. Okpotu, Mfamosing and Gboko show NO₂ growth well above the national background.</li>
+    <li><b>The Dangote refinery is the newest major emitter.</b> It went from bush in 2002 to sand fill in 2017 to a complete refinery in 2025. Climate TRACE estimates 2.65 Mt in 2024, and EDGAR's 1 km grid does not show it yet.</li>
+    <li><b>The emission inventory misplaces gas flares.</b> EDGAR spreads oil-and-gas emissions over coarse 0.1° blocks. The flares that MODIS sees burning on 60+ days a year mostly sit outside those blocks. Satellite fire persistence is the better locator.</li>
+    <li><b>One inventory hotspot is false.</b> A 0.69 Mt single-pixel point in southern Kaduna has no plant in any image and no NO₂ signal.</li>
+  </ul>
+</section>
+
+<section id="map">
+  <h2 class="col">National map</h2>
+  <figure class="map"><img src="map_national.jpg" alt="Map of Nigeria fossil CO2 emissions with 16 hotspots and gas flares" width="1600" height="1370">
+  <figcaption>EDGAR 2025 1 km fossil CO₂ for 2024, log scale. Circles are the 16 candidate hotspots. Orange and pink dots are 1 km pixels with MODIS fire on at least 60 of 730 days.</figcaption></figure>
+</section>
+
+<section id="ranking">
+  <h2 class="col">Ranking</h2>
+  <p class="col">Two independent inventories per site. The blue bar is the EDGAR 1 km cluster around the site (all sectors). The orange bar is Climate TRACE's estimate for the largest single facility there. Where they disagree strongly, the satellite imagery shows which is right: EDGAR misses the new Dangote refinery, Okpotu and Sokoto plants.</p>
+  <div class="legend"><span><i style="background:var(--s1)"></i>EDGAR 1 km cluster, 2024</span><span><i style="background:var(--s2)"></i>Climate TRACE largest facility, 2024</span></div>
+  <div class="chart">{{RANK}}</div>
+  <p class="note">Hover a bar for the exact value. Flare sites are not ranked here because neither inventory gives a per-site figure for them.</p>
+</section>
+
+<section id="flaring">
+  <h2 class="col">Gas flaring in the Niger Delta</h2>
+  <div class="cols">
+    <div><p>Flaring is Nigeria's best-known CO₂ source, but inventories place it badly. I mapped it directly: every 1 km MODIS pixel with fire on 60 or more of 730 days counts as a persistent fire. Savanna fires last days, so a pixel that burns for months is a flare.</p>
+    <p>That gives 156 pixels in 23 sites in 2024–25, and 75 pixels in 9 sites in 2014–15. All lie between 4.3° and 6.1° N, in the oil-producing belt and offshore.</p>
+    <p class="note">The jump in detections is not a measure of flared volume. MODIS's ageing orbits changed overpass times after 2020, and the World Bank's gas-flaring reports show Nigerian volumes falling. Use the sites, not the count, as the finding.</p></div>
+    <figure class="map" style="margin-top:0"><img src="map_niger_delta_flares.jpg" alt="Niger Delta map of persistent fire pixels in 2014-15 and 2024-25" width="1600" height="1120"><figcaption>Open pink: 2014–15. Filled orange: 2024–25. Size scales with detection days.</figcaption></figure>
+  </div>
+</section>
+
+<section id="atlas">
+  <h2 class="col">Hotspot atlas</h2>
+  <p class="col">Each site shows three time slices of true-colour imagery from Earth Engine, then the AlphaEarth embedding analysis from the original script. The script's k-means clustering is run per site with k = 8 and the same clusterer for 2017 and 2024. Its companion change map is the dot product of the 2017 and 2024 embedding vectors, where red means the surface changed.</p>
+  {{CARDS}}
+</section>
+
+<section id="table">
+  <h2 class="col">EDGAR top 20 clusters</h2>
+  <p class="col">Clusters of 1 km pixels above 3,300 t/km²/yr, the threshold above which pixels together hold half the national total. Rows 11–20 not in the atlas include the Kaduna refinery (row 11), Geregu power (12), Onitsha (13) and Abuja (18).</p>
+  <div class="tbl"><table><thead><tr><th>#</th><th>State</th><th>Centroid</th><th>Mt CO₂</th><th>Share</th><th>km²</th><th>Dominant sector</th><th>0.1° trend 2005/15/25 (Mt)</th><th>Largest Climate TRACE facility nearby</th></tr></thead><tbody>{{TABLE}}</tbody></table></div>
+</section>
+
+<section id="method" class="col">
+  <h2>Method and limits</h2>
+  <p><b>The linked script.</b> The Earth Engine link contains Google's Satellite Embedding (AlphaEarth) k-means example. It samples 500 pixels of the 64-band annual embedding, trains <code>wekaKMeans</code> for k = 2 to 50, and maps the clusters. Its drawn region is a rectangle in Iowa (−93.1°, 42.3°), and it holds no CO₂ data. Embeddings describe what a surface looks like, not what it emits. So I kept the method for characterising and change-dating each hotspot, and located the hotspots with emission data.</p>
+  <p><b>Emissions.</b> EDGAR 2025 GHG 1 km grid for 2024, all six sectors, which sums to 126.7 Mt for Nigeria. The 0.1° grids for 2005, 2015 and 2025 give trends; units are tonnes per year, checked against the national total. Climate TRACE v6 provides 2024 facility estimates for 15,829 Nigerian assets, of which 259 are point sources.</p>
+  <p><b>Satellite checks.</b> Sentinel-5P tropospheric NO₂, annual means for 2019 and 2025, inside a 5 km radius against the national median. The national median itself rose 16.5% over that period, partly from processor upgrades, so a site's growth is read against that background. MODIS fire (FIRMS) detection days give the flares. Sentinel-2 (Cloud Score+ masked median of the 20 clearest scenes) and Landsat 7 (pre-SLC-failure, 1999–2003) give the imagery.</p>
+  <p><b>Not covered.</b> Satellites cannot yet map CO₂ itself at facility scale over Nigeria. OCO-2/3 sample narrow tracks, and a plant's plume is under 1% of the column. Land-use and fire CO₂ are outside this fossil-CO₂ analysis. Climate TRACE puts forest and savanna fires alone near 100 Mt CO₂ in 2024, so they deserve a separate study.</p>
+</section>
+
+<section id="earth" class="col">
+  <h2>Google Earth Pro file</h2>
+  <p><code>Nigeria_CO2_Hotspots.kmz</code> has every hotspot with three camera views: latest, ~2015 and ~2005. Each view carries a date that sets Earth Pro's historical-imagery slider. It also includes both flare layers and the EDGAR 1 km overlay, which is off by default. Turn on <b>View ▸ Historical Imagery</b> first, then double-click a view to fly there at that date.</p>
+</section>
+</div>

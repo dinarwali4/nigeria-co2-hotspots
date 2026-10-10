@@ -1,0 +1,1815 @@
+[
+ {
+  "name": "Nigeria_Niger Delta_Conventional onshore",
+  "sector": "oil-and-gas-production",
+  "lon": 6.431772,
+  "lat": 5.287511,
+  "co2_t": 9523413.147299998
+ },
+ {
+  "name": "Nigeria_Niger Delta_Conventional shelf",
+  "sector": "oil-and-gas-production",
+  "lon": 6.727302,
+  "lat": 4.591181,
+  "co2_t": 5170162.6627
+ },
+ {
+  "name": "Dangote Cement Obajana Cement Plant",
+  "sector": "cement",
+  "lon": 6.42192499509181,
+  "lat": 7.92917627642587,
+  "co2_t": 3870190.225521904
+ },
+ {
+  "name": "Nigeria_OtherBasins_OtherResources",
+  "sector": "oil-and-gas-production",
+  "lon": 5.972556,
+  "lat": 4.48743,
+  "co2_t": 3644219.6358999996
+ },
+ {
+  "name": "Port Harcourt Fertilizer Complex",
+  "sector": "chemicals",
+  "lon": 7.1029183,
+  "lat": 4.8354765,
+  "co2_t": 3150985.915492957
+ },
+ {
+  "name": "BUA International Okpotu Cement Plant",
+  "sector": "cement",
+  "lon": 6.40174253875447,
+  "lat": 7.35465215471778,
+  "co2_t": 2828721.3637212473
+ },
+ {
+  "name": "Dangote Petroleum Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 3.998596,
+  "lat": 6.454844,
+  "co2_t": 2645715.0656
+ },
+ {
+  "name": "BUA International Sokoto Cement Plant",
+  "sector": "cement",
+  "lon": 5.17177875614406,
+  "lat": 13.0587467925094,
+  "co2_t": 2358039.648230292
+ },
+ {
+  "name": "Nigeria_Niger Delta_Conventional onshore",
+  "sector": "oil-and-gas-transport",
+  "lon": 6.431772,
+  "lat": 5.287511,
+  "co2_t": 2215755.6533999997
+ },
+ {
+  "name": "Dangote Cement Ojibawo Cement Plant",
+  "sector": "cement",
+  "lon": 3.04985145249704,
+  "lat": 7.00598219879176,
+  "co2_t": 2193699.669776447
+ },
+ {
+  "name": "Nigeria_OtherBasins_OtherResources",
+  "sector": "oil-and-gas-transport",
+  "lon": 5.972556,
+  "lat": 4.48743,
+  "co2_t": 2121737.8615
+ },
+ {
+  "name": "Azura-Edo IPP power station",
+  "sector": "electricity-generation",
+  "lon": 5.6806,
+  "lat": 6.4099,
+  "co2_t": 2121600
+ },
+ {
+  "name": "Egbin power station",
+  "sector": "electricity-generation",
+  "lon": 3.6151,
+  "lat": 6.5637,
+  "co2_t": 2058100
+ },
+ {
+  "name": "Nigeria_Niger Delta_Conventional shelf",
+  "sector": "oil-and-gas-transport",
+  "lon": 6.727302,
+  "lat": 4.591181,
+  "co2_t": 1874651.4
+ },
+ {
+  "name": "Ughelli power station",
+  "sector": "electricity-generation",
+  "lon": 5.9151,
+  "lat": 5.5399,
+  "co2_t": 1808100
+ },
+ {
+  "name": "Onne (Port Harcourt) Fertilizer Complex",
+  "sector": "chemicals",
+  "lon": 7.012544,
+  "lat": 4.7744893,
+  "co2_t": 1643014.0845070416
+ },
+ {
+  "name": "Calabar power station",
+  "sector": "electricity-generation",
+  "lon": 8.2726,
+  "lat": 5.1897,
+  "co2_t": 1357920
+ },
+ {
+  "name": "Sapele power station",
+  "sector": "electricity-generation",
+  "lon": 5.645,
+  "lat": 5.9261,
+  "co2_t": 1346700
+ },
+ {
+  "name": "Dangote Cement Gboko Cement Plant",
+  "sector": "cement",
+  "lon": 8.97374555190278,
+  "lat": 7.41078521840216,
+  "co2_t": 1181917.285422697
+ },
+ {
+  "name": "Bonny",
+  "sector": "international-shipping",
+  "lon": 7.154544,
+  "lat": 4.432047,
+  "co2_t": 1166828.86208195
+ },
+ {
+  "name": "Lafarge Africa Mfamosing Cement Plant",
+  "sector": "cement",
+  "lon": 8.514936041195,
+  "lat": 5.06433623684427,
+  "co2_t": 1132692.3311811443
+ },
+ {
+  "name": "Afam V power station",
+  "sector": "electricity-generation",
+  "lon": 7.2535,
+  "lat": 4.8518,
+  "co2_t": 1050760
+ },
+ {
+  "name": "Lafarge Africa Ewekoro Cement Plant",
+  "sector": "cement",
+  "lon": 3.20350102637138,
+  "lat": 6.89522723271791,
+  "co2_t": 989929.5161759505
+ },
+ {
+  "name": "Oando Kwale power station",
+  "sector": "electricity-generation",
+  "lon": 6.5759,
+  "lat": 5.7097,
+  "co2_t": 831710
+ },
+ {
+  "name": "Afam VI power station",
+  "sector": "electricity-generation",
+  "lon": 7.2569,
+  "lat": 4.8495,
+  "co2_t": 793800
+ },
+ {
+  "name": "Lagos",
+  "sector": "international-shipping",
+  "lon": 3.383544,
+  "lat": 6.480975,
+  "co2_t": 792785.5827115822
+ },
+ {
+  "name": "Murtala Muhammed International Airport",
+  "sector": "international-aviation",
+  "lon": 3.32116,
+  "lat": 6.57737,
+  "co2_t": 748646.2642131426
+ },
+ {
+  "name": "Omotosho II power station",
+  "sector": "electricity-generation",
+  "lon": 4.7109,
+  "lat": 6.7324,
+  "co2_t": 671730
+ },
+ {
+  "name": "Geregu II power station",
+  "sector": "electricity-generation",
+  "lon": 6.6602,
+  "lat": 7.4717,
+  "co2_t": 646250
+ },
+ {
+  "name": "Alaoji power station",
+  "sector": "electricity-generation",
+  "lon": 7.3218,
+  "lat": 5.0668,
+  "co2_t": 643710
+ },
+ {
+  "name": "Ihovbor power station",
+  "sector": "electricity-generation",
+  "lon": 5.6829,
+  "lat": 6.4068,
+  "co2_t": 595670
+ },
+ {
+  "name": "Bonny Island LNG power plant",
+  "sector": "electricity-generation",
+  "lon": 7.1616,
+  "lat": 4.4184,
+  "co2_t": 589110
+ },
+ {
+  "name": "Geregu I power station",
+  "sector": "electricity-generation",
+  "lon": 6.659,
+  "lat": 7.4696,
+  "co2_t": 576010
+ },
+ {
+  "name": "Afam (FIPL) power station",
+  "sector": "electricity-generation",
+  "lon": 7.2265,
+  "lat": 4.835,
+  "co2_t": 451380
+ },
+ {
+  "name": "Olorunsogo II power station",
+  "sector": "electricity-generation",
+  "lon": 3.3163,
+  "lat": 6.8853,
+  "co2_t": 450970
+ },
+ {
+  "name": "Omotosho I power station",
+  "sector": "electricity-generation",
+  "lon": 4.7104,
+  "lat": 6.736,
+  "co2_t": 416550
+ },
+ {
+  "name": "Lagos",
+  "sector": "domestic-shipping",
+  "lon": 3.383544,
+  "lat": 6.480975,
+  "co2_t": 416072.45406854106
+ },
+ {
+  "name": "Lekki Refinery power station",
+  "sector": "electricity-generation",
+  "lon": 3.5852,
+  "lat": 6.4698,
+  "co2_t": 402910
+ },
+ {
+  "name": "POWER BARGE EBUTE",
+  "sector": "electricity-generation",
+  "lon": 3.6146,
+  "lat": 6.5595,
+  "co2_t": 387230
+ },
+ {
+  "name": "Olorunsogo I power plant",
+  "sector": "electricity-generation",
+  "lon": 3.2056,
+  "lat": 6.8939,
+  "co2_t": 378920
+ },
+ {
+  "name": "Indorama Eleme Petrochemical, Port Harcourt",
+  "sector": "petrochemical-steam-cracking",
+  "lon": 7.104004,
+  "lat": 4.83924,
+  "co2_t": 378310.2487599996
+ },
+ {
+  "name": "Ibom power station",
+  "sector": "electricity-generation",
+  "lon": 7.5674,
+  "lat": 4.5646,
+  "co2_t": 370550
+ },
+ {
+  "name": "Omoku",
+  "sector": "electricity-generation",
+  "lon": 6.6632,
+  "lat": 5.39,
+  "co2_t": 348540
+ },
+ {
+  "name": "Gbarain Gas power station",
+  "sector": "electricity-generation",
+  "lon": 6.3016,
+  "lat": 5.0311,
+  "co2_t": 322360
+ },
+ {
+  "name": "Dangote Cement Okpella Cement Plant",
+  "sector": "cement",
+  "lon": 6.46124640831478,
+  "lat": 7.34359740577397,
+  "co2_t": 298243.2516558482
+ },
+ {
+  "name": "ELEME PETROCHEM",
+  "sector": "electricity-generation",
+  "lon": 7.102,
+  "lat": 4.8351,
+  "co2_t": 294000
+ },
+ {
+  "name": "Omoku-II power station",
+  "sector": "electricity-generation",
+  "lon": 6.665,
+  "lat": 5.385,
+  "co2_t": 290230
+ },
+ {
+  "name": "Lafarge Africa Ashaka Cement Plant",
+  "sector": "cement",
+  "lon": 11.4758286448503,
+  "lat": 10.9310027949163,
+  "co2_t": 260898.0047900119
+ },
+ {
+  "name": "ALSCON Smelter power plant",
+  "sector": "electricity-generation",
+  "lon": 7.5735,
+  "lat": 4.5687,
+  "co2_t": 251860
+ },
+ {
+  "name": "NGA-Obio/Akpor_methanol",
+  "sector": "chemicals",
+  "lon": 7.00171784238301,
+  "lat": 4.84930967371664,
+  "co2_t": 219041.46000000002
+ },
+ {
+  "name": "Mangal Industries Iddo Cement Plant",
+  "sector": "cement",
+  "lon": 5.94471868424142,
+  "lat": 8.03820335387779,
+  "co2_t": 218752.05131719564
+ },
+ {
+  "name": "Nnamdi Azikiwe International Airport",
+  "sector": "international-aviation",
+  "lon": 7.26317,
+  "lat": 9.00679,
+  "co2_t": 209789.22258803374
+ },
+ {
+  "name": "PHRC Port Harcourt Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 7.100668,
+  "lat": 4.763787,
+  "co2_t": 184706.4339999999
+ },
+ {
+  "name": "NGA-Port Harcourt_methanol",
+  "sector": "chemicals",
+  "lon": 7.03509481359285,
+  "lat": 4.74775171080235,
+  "co2_t": 182359.66500000004
+ },
+ {
+  "name": "TRANS-AMADI",
+  "sector": "electricity-generation",
+  "lon": 7.0314,
+  "lat": 4.816,
+  "co2_t": 180180
+ },
+ {
+  "name": "Nnamdi Azikiwe International Airport",
+  "sector": "domestic-aviation",
+  "lon": 7.26317,
+  "lat": 9.00679,
+  "co2_t": 170701.8484320777
+ },
+ {
+  "name": "Murtala Muhammed International Airport",
+  "sector": "domestic-aviation",
+  "lon": 3.32116,
+  "lat": 6.57737,
+  "co2_t": 164113.926165739
+ },
+ {
+  "name": "Bonny",
+  "sector": "domestic-shipping",
+  "lon": 7.154544,
+  "lat": 4.432047,
+  "co2_t": 162983.1137933363
+ },
+ {
+  "name": "Ogu Creek Onne",
+  "sector": "international-shipping",
+  "lon": 7.159173,
+  "lat": 4.686361,
+  "co2_t": 156808.45622730837
+ },
+ {
+  "name": "Ogu Creek Onne",
+  "sector": "domestic-shipping",
+  "lon": 7.159173,
+  "lat": 4.686361,
+  "co2_t": 148483.5080006862
+ },
+ {
+  "name": "Tin Can Island",
+  "sector": "domestic-shipping",
+  "lon": 3.349996,
+  "lat": 6.349995,
+  "co2_t": 144891.9551881687
+ },
+ {
+  "name": "BONNY ISLAND TERMINAL",
+  "sector": "electricity-generation",
+  "lon": 7.1556,
+  "lat": 4.42,
+  "co2_t": 144770
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 5.3131,
+  "lat": 5.9302,
+  "co2_t": 107450.23544416204
+ },
+ {
+  "name": "Okrika",
+  "sector": "domestic-shipping",
+  "lon": 7.083325,
+  "lat": 4.716665,
+  "co2_t": 102452.9731679066
+ },
+ {
+  "name": "Kam Industries Kwara steel plant",
+  "sector": "iron-and-steel",
+  "lon": 4.53517732042415,
+  "lat": 8.45102917138587,
+  "co2_t": 98039.99999999999
+ },
+ {
+  "name": "Port Harcourt",
+  "sector": "international-shipping",
+  "lon": 7.039813,
+  "lat": 4.785507,
+  "co2_t": 88873.01705874898
+ },
+ {
+  "name": "Edo Modular Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 5.668318,
+  "lat": 6.078189,
+  "co2_t": 78399.76971999959
+ },
+ {
+  "name": "NNPC Warri Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 5.71685,
+  "lat": 5.5679,
+  "co2_t": 75887.7702099999
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 7.1709,
+  "lat": 4.6131,
+  "co2_t": 67979.955306591
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 3.4021,
+  "lat": 6.3375,
+  "co2_t": 64474.835758529254
+ },
+ {
+  "name": "Port Harcourt",
+  "sector": "domestic-shipping",
+  "lon": 7.039813,
+  "lat": 4.785507,
+  "co2_t": 63568.95398770551
+ },
+ {
+  "name": "Mallam Aminu Kano International Airport",
+  "sector": "international-aviation",
+  "lon": 8.523566,
+  "lat": 12.045613,
+  "co2_t": 57383.03265405828
+ },
+ {
+  "name": "Maiduguri power plant",
+  "sector": "electricity-generation",
+  "lon": 13.15,
+  "lat": 11.833,
+  "co2_t": 55345
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 7.1703,
+  "lat": 4.6129,
+  "co2_t": 51138.56828814186
+ },
+ {
+  "name": "Aradel Modular Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 6.654867,
+  "lat": 4.927519,
+  "co2_t": 47910.97038
+ },
+ {
+  "name": "Zuma Coal Mining Project",
+  "sector": "coal-mining",
+  "lon": 7.452343,
+  "lat": 9.0108087,
+  "co2_t": 46701.555527760196
+ },
+ {
+  "name": "Ibeju Lekki",
+  "sector": "international-shipping",
+  "lon": 4.010307,
+  "lat": 6.423006,
+  "co2_t": 43597.2250957489
+ },
+ {
+  "name": "OPAC Modular Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 6.392862,
+  "lat": 5.669052,
+  "co2_t": 43555.427619999595
+ },
+ {
+  "name": "Port Harcourt International Airport",
+  "sector": "domestic-aviation",
+  "lon": 6.94959,
+  "lat": 5.01549,
+  "co2_t": 40763.75654677007
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 5.0583,
+  "lat": 5.46,
+  "co2_t": 38275.28386430442
+ },
+ {
+  "name": "Warri Oil Terminal",
+  "sector": "domestic-shipping",
+  "lon": 5.685568,
+  "lat": 5.536586,
+  "co2_t": 37857.48925041477
+ },
+ {
+  "name": "Escravos",
+  "sector": "domestic-shipping",
+  "lon": 5.199379,
+  "lat": 5.607179,
+  "co2_t": 37137.545767328826
+ },
+ {
+  "name": "Oil Terminal,Escravos",
+  "sector": "domestic-shipping",
+  "lon": 5.001038,
+  "lat": 5.500683,
+  "co2_t": 35161.46427244739
+ },
+ {
+  "name": "Mallam Aminu Kano International Airport",
+  "sector": "domestic-aviation",
+  "lon": 8.523566,
+  "lat": 12.045613,
+  "co2_t": 34144.576549172954
+ },
+ {
+  "name": "Tin Can Island",
+  "sector": "international-shipping",
+  "lon": 3.349996,
+  "lat": 6.349995,
+  "co2_t": 32404.729721476448
+ },
+ {
+  "name": "Escravos Oil Terminal",
+  "sector": "domestic-shipping",
+  "lon": 5.109996,
+  "lat": 5.550828,
+  "co2_t": 25459.0266027515
+ },
+ {
+  "name": "Esuk Utan",
+  "sector": "international-shipping",
+  "lon": 8.319429,
+  "lat": 5.011716,
+  "co2_t": 24521.14138425514
+ },
+ {
+  "name": "Stockgap Fuels LPG Terminal,Port Harcourt",
+  "sector": "domestic-shipping",
+  "lon": 6.937515,
+  "lat": 4.796455,
+  "co2_t": 23957.155930276505
+ },
+ {
+  "name": "Waltersmith Modular Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 6.877993,
+  "lat": 5.313818,
+  "co2_t": 21777.7138099998
+ },
+ {
+  "name": "Lafarge Africa Sagamu Cement Plant",
+  "sector": "cement",
+  "lon": 3.62090498429149,
+  "lat": 6.81439176971815,
+  "co2_t": 21693.13321453518
+ },
+ {
+  "name": "Tunde Ramos Coal Mine",
+  "sector": "coal-mining",
+  "lon": 6.569476,
+  "lat": 7.6750691,
+  "co2_t": 19447.010710216957
+ },
+ {
+  "name": "Esuk Utan",
+  "sector": "domestic-shipping",
+  "lon": 8.319429,
+  "lat": 5.011716,
+  "co2_t": 19079.772361695766
+ },
+ {
+  "name": "Dangote Jetty Lagos",
+  "sector": "international-shipping",
+  "lon": 4.102477,
+  "lat": 6.408231,
+  "co2_t": 18253.922968669238
+ },
+ {
+  "name": "Ibese Cement power station",
+  "sector": "electricity-generation",
+  "lon": 3.0509,
+  "lat": 7.0092,
+  "co2_t": 16988
+ },
+ {
+  "name": "Warri",
+  "sector": "international-shipping",
+  "lon": 5.729437,
+  "lat": 5.514858,
+  "co2_t": 15921.130854845047
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 6.69,
+  "lat": 4.5124,
+  "co2_t": 14623.914667312056
+ },
+ {
+  "name": "Akanu Ibiam International Airport",
+  "sector": "domestic-aviation",
+  "lon": 7.560463,
+  "lat": 6.473718,
+  "co2_t": 14048.449645182267
+ },
+ {
+  "name": "Forcados",
+  "sector": "domestic-shipping",
+  "lon": 5.433325,
+  "lat": 5.366665,
+  "co2_t": 13969.476694719502
+ },
+ {
+  "name": "Sam Mbakwe International Cargo Airport",
+  "sector": "domestic-aviation",
+  "lon": 7.20603,
+  "lat": 5.42706,
+  "co2_t": 13915.02653747353
+ },
+ {
+  "name": "Akwa Ibom International Airport",
+  "sector": "domestic-aviation",
+  "lon": 8.093,
+  "lat": 4.8725,
+  "co2_t": 13752.262865390048
+ },
+ {
+  "name": "Aboul Ashun",
+  "sector": "domestic-shipping",
+  "lon": 3.233699,
+  "lat": 6.437881,
+  "co2_t": 13675.565646122144
+ },
+ {
+  "name": "AA Reno Petroleum Terminal,Ijegun,Lagos",
+  "sector": "domestic-shipping",
+  "lon": 3.26816,
+  "lat": 6.42966,
+  "co2_t": 13208.588315107081
+ },
+ {
+  "name": "Brass LNG",
+  "sector": "domestic-shipping",
+  "lon": 6.237645,
+  "lat": 4.322924,
+  "co2_t": 10992.694839614118
+ },
+ {
+  "name": "DMCL Modular Refinery",
+  "sector": "oil-and-gas-refining",
+  "lon": 6.02261,
+  "lat": 6.12452,
+  "co2_t": 10888.8569059998
+ },
+ {
+  "name": "Asaba International Airport",
+  "sector": "domestic-aviation",
+  "lon": 6.665278,
+  "lat": 6.204167,
+  "co2_t": 10776.890638245017
+ },
+ {
+  "name": "Benin Airport",
+  "sector": "domestic-aviation",
+  "lon": 5.5995001792907715,
+  "lat": 6.316979885101318,
+  "co2_t": 10028.661246206904
+ },
+ {
+  "name": "Yola Airport",
+  "sector": "domestic-aviation",
+  "lon": 12.430399894714355,
+  "lat": 9.257550239562988,
+  "co2_t": 8287.163308839734
+ },
+ {
+  "name": "Dangote Jetty Lagos",
+  "sector": "domestic-shipping",
+  "lon": 4.102477,
+  "lat": 6.408231,
+  "co2_t": 8093.88727123515
+ },
+ {
+  "name": "Forcados Oil Terminal 2",
+  "sector": "domestic-shipping",
+  "lon": 5.213951,
+  "lat": 5.122116,
+  "co2_t": 8033.852835877855
+ },
+ {
+  "name": "Sadiq Abubakar III International Airport",
+  "sector": "domestic-aviation",
+  "lon": 5.207547,
+  "lat": 12.915729,
+  "co2_t": 7963.464335595233
+ },
+ {
+  "name": "Idowu Falola Coal Mine",
+  "sector": "coal-mining",
+  "lon": 5.3091431,
+  "lat": 6.5044808,
+  "co2_t": 7778.804284086782
+ },
+ {
+  "name": "Koko",
+  "sector": "domestic-shipping",
+  "lon": 5.460136,
+  "lat": 5.999021,
+  "co2_t": 7632.323813154627
+ },
+ {
+  "name": "Port Harcourt International Airport",
+  "sector": "international-aviation",
+  "lon": 6.94959,
+  "lat": 5.01549,
+  "co2_t": 7318.299462678819
+ },
+ {
+  "name": "Margaret Ekpo International Airport",
+  "sector": "domestic-aviation",
+  "lon": 8.347200393676758,
+  "lat": 4.976019859313965,
+  "co2_t": 7260.046233923535
+ },
+ {
+  "name": "Akanu Ibiam International Airport",
+  "sector": "international-aviation",
+  "lon": 7.560463,
+  "lat": 6.473718,
+  "co2_t": 7121.305143182836
+ },
+ {
+  "name": "Maiduguri International Airport",
+  "sector": "domestic-aviation",
+  "lon": 13.080702,
+  "lat": 11.854163,
+  "co2_t": 7001.231682895789
+ },
+ {
+  "name": "Offshore Terminal",
+  "sector": "domestic-shipping",
+  "lon": 7.828995,
+  "lat": 4.404995,
+  "co2_t": 6995.901099504907
+ },
+ {
+  "name": "Lafia-Obi Coal Mine",
+  "sector": "coal-mining",
+  "lon": 6.9564324,
+  "lat": 8.5454854,
+  "co2_t": 6491.416895160295
+ },
+ {
+  "name": "Ogwashi Coal Mine",
+  "sector": "coal-mining",
+  "lon": 7.427832,
+  "lat": 6.449745,
+  "co2_t": 6491.416895160294
+ },
+ {
+  "name": "Inyi Coal Mine",
+  "sector": "coal-mining",
+  "lon": 7.0784768,
+  "lat": 6.6926124,
+  "co2_t": 6491.416895160294
+ },
+ {
+  "name": "Ogboyoga Coal Mine",
+  "sector": "coal-mining",
+  "lon": 7.2521981,
+  "lat": 6.7089793,
+  "co2_t": 6491.416895160294
+ },
+ {
+  "name": "Ezinmo Coal Mine",
+  "sector": "coal-mining",
+  "lon": 7.3229226,
+  "lat": 7.3127955,
+  "co2_t": 6491.416895160294
+ },
+ {
+  "name": "Warri Oil Terminal",
+  "sector": "international-shipping",
+  "lon": 5.685568,
+  "lat": 5.536586,
+  "co2_t": 6293.475170264042
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 7.752,
+  "lat": 4.4378,
+  "co2_t": 6275.835235513747
+ },
+ {
+  "name": "Warri",
+  "sector": "domestic-shipping",
+  "lon": 5.729437,
+  "lat": 5.514858,
+  "co2_t": 6149.923287232106
+ },
+ {
+  "name": "Sea Eagle Terminal",
+  "sector": "domestic-shipping",
+  "lon": 5.316663,
+  "lat": 4.799995,
+  "co2_t": 5876.018919997
+ },
+ {
+  "name": "Warri Refinery Jetty",
+  "sector": "international-shipping",
+  "lon": 5.695617,
+  "lat": 5.536208,
+  "co2_t": 5759.292850971222
+ },
+ {
+  "name": "Forcados Oil Terminal 2",
+  "sector": "international-shipping",
+  "lon": 5.213951,
+  "lat": 5.122116,
+  "co2_t": 5357.585845828056
+ },
+ {
+  "name": "Rainoil Depot Terminal,Ijegun,Lagos",
+  "sector": "domestic-shipping",
+  "lon": 3.262808,
+  "lat": 6.428747,
+  "co2_t": 5232.367226551834
+ },
+ {
+  "name": "Calabar",
+  "sector": "domestic-shipping",
+  "lon": 8.316665,
+  "lat": 4.966665,
+  "co2_t": 4875.247310705118
+ },
+ {
+  "name": "General Tunde Idiagbon International Airport",
+  "sector": "domestic-aviation",
+  "lon": 4.49392,
+  "lat": 8.44021,
+  "co2_t": 4841.6602506214085
+ },
+ {
+  "name": "Koko",
+  "sector": "international-shipping",
+  "lon": 5.460136,
+  "lat": 5.999021,
+  "co2_t": 4585.82004365325
+ },
+ {
+  "name": "Warri Airport",
+  "sector": "domestic-aviation",
+  "lon": 5.8187,
+  "lat": 5.59821,
+  "co2_t": 4440.71322294671
+ },
+ {
+  "name": "Ibeju Lekki",
+  "sector": "domestic-shipping",
+  "lon": 4.010307,
+  "lat": 6.423006,
+  "co2_t": 4345.337253212929
+ },
+ {
+  "name": "Oil Terminal,Escravos",
+  "sector": "international-shipping",
+  "lon": 5.001038,
+  "lat": 5.500683,
+  "co2_t": 4195.601724262
+ },
+ {
+  "name": "Sapele",
+  "sector": "international-shipping",
+  "lon": 5.677494,
+  "lat": 5.906245,
+  "co2_t": 4025.5198781490326
+ },
+ {
+  "name": "AA Reno Petroleum Terminal,Ijegun,Lagos",
+  "sector": "international-shipping",
+  "lon": 3.26816,
+  "lat": 6.42966,
+  "co2_t": 3808.9518674612045
+ },
+ {
+  "name": "Warri Refinery Jetty",
+  "sector": "domestic-shipping",
+  "lon": 5.695617,
+  "lat": 5.536208,
+  "co2_t": 3775.1456488615145
+ },
+ {
+  "name": "Ibadan Airport",
+  "sector": "domestic-aviation",
+  "lon": 3.97832989692688,
+  "lat": 7.362460136413574,
+  "co2_t": 3641.4080444670385
+ },
+ {
+  "name": "Star Energy Terminal,Ijegun,Lgos",
+  "sector": "domestic-shipping",
+  "lon": 3.265444,
+  "lat": 6.429169,
+  "co2_t": 3633.096772387624
+ },
+ {
+  "name": "Akure Airport",
+  "sector": "domestic-aviation",
+  "lon": 5.3010101318359375,
+  "lat": 7.246739864349365,
+  "co2_t": 3212.2861062688767
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 5.3955,
+  "lat": 5.1369,
+  "co2_t": 3089.954091919586
+ },
+ {
+  "name": "Emadeb Energy,Ijegun,Lagos",
+  "sector": "domestic-shipping",
+  "lon": 3.27085,
+  "lat": 6.429919,
+  "co2_t": 2978.558318808675
+ },
+ {
+  "name": "Rainoil Depot Terminal,Ijegun,Lagos",
+  "sector": "international-shipping",
+  "lon": 3.262808,
+  "lat": 6.428747,
+  "co2_t": 2406.401724519634
+ },
+ {
+  "name": "Kaduna International Airport",
+  "sector": "domestic-aviation",
+  "lon": 7.32011,
+  "lat": 10.696,
+  "co2_t": 2341.7541188925243
+ },
+ {
+  "name": "Gombe Lawanti International Airport",
+  "sector": "domestic-aviation",
+  "lon": 10.9,
+  "lat": 10.298889,
+  "co2_t": 1614.9239438098612
+ },
+ {
+  "name": "Stockgap Fuels LPG Terminal,Port Harcourt",
+  "sector": "international-shipping",
+  "lon": 6.937515,
+  "lat": 4.796455,
+  "co2_t": 1539.8492812663317
+ },
+ {
+  "name": "Umaru Musa Yar'adua Airport",
+  "sector": "domestic-aviation",
+  "lon": 7.66045,
+  "lat": 13.0078,
+  "co2_t": 1508.5010812922665
+ },
+ {
+  "name": "Emadeb Energy,Ijegun,Lagos",
+  "sector": "international-shipping",
+  "lon": 3.27085,
+  "lat": 6.429919,
+  "co2_t": 1488.5260543823242
+ },
+ {
+  "name": "Sapele",
+  "sector": "domestic-shipping",
+  "lon": 5.677494,
+  "lat": 5.906245,
+  "co2_t": 1393.9575943909854
+ },
+ {
+  "name": "Yakubu Gowon Airport",
+  "sector": "domestic-aviation",
+  "lon": 8.869050025939941,
+  "lat": 9.639829635620115,
+  "co2_t": 1385.016775025401
+ },
+ {
+  "name": "Star Energy Terminal,Ijegun,Lgos",
+  "sector": "international-shipping",
+  "lon": 3.265444,
+  "lat": 6.429169,
+  "co2_t": 1312.0704169273376
+ },
+ {
+  "name": "Offshore Terminal",
+  "sector": "international-shipping",
+  "lon": 7.828995,
+  "lat": 4.404995,
+  "co2_t": 834.8696768231031
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 8.2846,
+  "lat": 4.9291,
+  "co2_t": 671.1922449469566
+ },
+ {
+  "name": "Escravos",
+  "sector": "international-shipping",
+  "lon": 5.199379,
+  "lat": 5.607179,
+  "co2_t": 652.7078363548333
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 7.5973,
+  "lat": 4.4987,
+  "co2_t": 612.8843789100647
+ },
+ {
+  "name": "Brass LNG",
+  "sector": "international-shipping",
+  "lon": 6.237645,
+  "lat": 4.322924,
+  "co2_t": 572.520167070788
+ },
+ {
+  "name": "Calabar",
+  "sector": "international-shipping",
+  "lon": 8.316665,
+  "lat": 4.966665,
+  "co2_t": 566.8508139099152
+ },
+ {
+  "name": "Okrika",
+  "sector": "international-shipping",
+  "lon": 7.083325,
+  "lat": 4.716665,
+  "co2_t": 557.5743976071174
+ },
+ {
+  "name": "Sir Abubakar Tafawa Balewa Bauchi State International Airport",
+  "sector": "domestic-aviation",
+  "lon": 9.744,
+  "lat": 10.482833,
+  "co2_t": 512.0442614286694
+ },
+ {
+  "name": "Aboul Ashun",
+  "sector": "international-shipping",
+  "lon": 3.233699,
+  "lat": 6.437881,
+  "co2_t": 488.6982261080943
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 8.2942,
+  "lat": 4.942,
+  "co2_t": 370.6774512641132
+ },
+ {
+  "name": "Burutu",
+  "sector": "domestic-shipping",
+  "lon": 5.499995,
+  "lat": 5.349995,
+  "co2_t": 274.44073486328125
+ },
+ {
+  "name": "Makurdi Airport",
+  "sector": "domestic-aviation",
+  "lon": 8.61394,
+  "lat": 7.70388,
+  "co2_t": 131.83427311691358
+ },
+ {
+  "name": "General Tunde Idiagbon International Airport",
+  "sector": "international-aviation",
+  "lon": 4.49392,
+  "lat": 8.44021,
+  "co2_t": 117.08608649015054
+ },
+ {
+  "name": "Delta Steel Company,Ovwian Delta",
+  "sector": "domestic-shipping",
+  "lon": 5.77102,
+  "lat": 5.486411,
+  "co2_t": 111.07724719900001
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 9.3557,
+  "lat": 10.1511,
+  "co2_t": 67.30066849337891
+ },
+ {
+  "name": "Escravos Oil Terminal",
+  "sector": "international-shipping",
+  "lon": 5.109996,
+  "lat": 5.550828,
+  "co2_t": 62.3014644465
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 9.3557,
+  "lat": 10.1511,
+  "co2_t": 46.25210541486741
+ },
+ {
+  "name": "Akwa Ibom International Airport",
+  "sector": "international-aviation",
+  "lon": 8.093,
+  "lat": 4.8725,
+  "co2_t": 20.02607968249623
+ },
+ {
+  "name": "Forcados",
+  "sector": "international-shipping",
+  "lon": 5.433325,
+  "lat": 5.366665,
+  "co2_t": 12.060414383
+ },
+ {
+  "name": "Gboko Cement power station",
+  "sector": "electricity-generation",
+  "lon": 8.9739,
+  "lat": 7.4108,
+  "co2_t": 0
+ },
+ {
+  "name": "Onyeama Coal Mine",
+  "sector": "coal-mining",
+  "lon": 7.457409,
+  "lat": 6.4139,
+  "co2_t": 0
+ },
+ {
+  "name": "Owukpa Coal Mine",
+  "sector": "coal-mining",
+  "lon": 7.432746,
+  "lat": 6.448988,
+  "co2_t": 0
+ },
+ {
+  "name": "Maiganga Coal Mine",
+  "sector": "coal-mining",
+  "lon": 11.153142,
+  "lat": 9.9900722,
+  "co2_t": 0
+ },
+ {
+  "name": "Unknown name",
+  "sector": "international-shipping",
+  "lon": 7.354,
+  "lat": 4.8734,
+  "co2_t": 0
+ },
+ {
+  "name": "Ebute-Metta, Lagos Mainland, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.39115741934717,
+  "lat": 6.489941091359339,
+  "co2_t": 0
+ },
+ {
+  "name": "Abeokuta, Abeokuta South, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.365936868205021,
+  "lat": 7.187498176869638,
+  "co2_t": 0
+ },
+ {
+  "name": "Oko Orisa, Epe, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.937061341387502,
+  "lat": 6.56432240015363,
+  "co2_t": 0
+ },
+ {
+  "name": "Iju Junction, Ifako/Ijaye, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.318576950423366,
+  "lat": 6.649653099288444,
+  "co2_t": 0
+ },
+ {
+  "name": "Oke Eri Street, Oworon\u1e63oki, Kosofe",
+  "sector": "solid-waste-disposal",
+  "lon": 3.405641328654843,
+  "lat": 6.554022276646146,
+  "co2_t": 0
+ },
+ {
+  "name": "Agboju, Amuwo Odofin, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.283417717345212,
+  "lat": 6.460182308978427,
+  "co2_t": 0
+ },
+ {
+  "name": "Akpajo, Eleme, Rivers",
+  "sector": "solid-waste-disposal",
+  "lon": 7.091709350881955,
+  "lat": 4.835498186265963,
+  "co2_t": 0
+ },
+ {
+  "name": "Okpe, Delta, 332",
+  "sector": "solid-waste-disposal",
+  "lon": 5.882217694359794,
+  "lat": 5.609436304273946,
+  "co2_t": 0
+ },
+ {
+  "name": "Okuokoko, Uvwie, Delta",
+  "sector": "solid-waste-disposal",
+  "lon": 5.80963415800099,
+  "lat": 5.586751088746308,
+  "co2_t": 0
+ },
+ {
+  "name": "Ikorodu, Lagos, 104213",
+  "sector": "solid-waste-disposal",
+  "lon": 3.484988862780644,
+  "lat": 6.642691281139094,
+  "co2_t": 0
+ },
+ {
+  "name": "Tope, Asa, Kwara",
+  "sector": "solid-waste-disposal",
+  "lon": 4.445588778757403,
+  "lat": 8.465701289881476,
+  "co2_t": 0
+ },
+ {
+  "name": "Ifo, Ogun, 100581",
+  "sector": "solid-waste-disposal",
+  "lon": 3.357474909142928,
+  "lat": 6.657164960207177,
+  "co2_t": 0
+ },
+ {
+  "name": "Ugbenuowhorun, Uvwie, Delta",
+  "sector": "solid-waste-disposal",
+  "lon": 5.81648686966639,
+  "lat": 5.542532079448576,
+  "co2_t": 0
+ },
+ {
+  "name": "Onitsha - Owerri Road, Onitsha, Onitsha North",
+  "sector": "solid-waste-disposal",
+  "lon": 6.79902286425814,
+  "lat": 6.103317869803795,
+  "co2_t": 0
+ },
+ {
+  "name": "Obio/Akpor, Rivers, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 6.964023349226584,
+  "lat": 4.935263590921929,
+  "co2_t": 0
+ },
+ {
+  "name": "Gbagada, Kosofe, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.372334580474065,
+  "lat": 6.55635470412378,
+  "co2_t": 0
+ },
+ {
+  "name": "Ughoru, Oshimili North, Delta",
+  "sector": "solid-waste-disposal",
+  "lon": 6.655763258008257,
+  "lat": 6.189372061646917,
+  "co2_t": 0
+ },
+ {
+  "name": "Jako-Petedo, Ado Odo/Ota, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.083699486485361,
+  "lat": 6.501001607051792,
+  "co2_t": 0
+ },
+ {
+  "name": "Badagry, Lagos, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 2.87043911761398,
+  "lat": 6.437663846232713,
+  "co2_t": 0
+ },
+ {
+  "name": "Ijoko, Shagamu, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.636715794649791,
+  "lat": 6.840596405880376,
+  "co2_t": 0
+ },
+ {
+  "name": "University Of Lagos, Olaboye Olaleye Street, Iwaya",
+  "sector": "solid-waste-disposal",
+  "lon": 3.392581393584557,
+  "lat": 6.513848457239913,
+  "co2_t": 0
+ },
+ {
+  "name": "White-Dove Group Of Schools, Erubere Street, Ugborikoko",
+  "sector": "solid-waste-disposal",
+  "lon": 5.76584685729742,
+  "lat": 5.534788277124082,
+  "co2_t": 0
+ },
+ {
+  "name": "Isolo, Oshodi/Isolo, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.318014714566506,
+  "lat": 6.529851638109835,
+  "co2_t": 0
+ },
+ {
+  "name": "Lagos-Ibadan Expressway, Ibafo, Obafemi Owode",
+  "sector": "solid-waste-disposal",
+  "lon": 3.433698928030594,
+  "lat": 6.802643802333765,
+  "co2_t": 0
+ },
+ {
+  "name": "Igbede, Ojo, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.164584736122995,
+  "lat": 6.456413946995649,
+  "co2_t": 0
+ },
+ {
+  "name": "Aguda, Agidingbi, Ikeja",
+  "sector": "solid-waste-disposal",
+  "lon": 3.358578112308165,
+  "lat": 6.628479259616585,
+  "co2_t": 0
+ },
+ {
+  "name": "Alaiyabiagba, Ajeromi/Ifelodun, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.319226887999481,
+  "lat": 6.455321911067586,
+  "co2_t": 0
+ },
+ {
+  "name": "Alh. Mukaila Str, Ikotun, Alimosho",
+  "sector": "solid-waste-disposal",
+  "lon": 3.271276689282137,
+  "lat": 6.537040705064101,
+  "co2_t": 0
+ },
+ {
+  "name": "Meran, Alimosho, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.264049410191757,
+  "lat": 6.638021793361492,
+  "co2_t": 0
+ },
+ {
+  "name": "Surulere, Oke Ira, Surulere",
+  "sector": "solid-waste-disposal",
+  "lon": 3.368270940807174,
+  "lat": 6.502496597088481,
+  "co2_t": 0
+ },
+ {
+  "name": "Owerri, Owerri Municipal, Imo",
+  "sector": "solid-waste-disposal",
+  "lon": 7.036188454578609,
+  "lat": 5.464762717518825,
+  "co2_t": 0
+ },
+ {
+  "name": "Onitsha, Onitsha North, Anambra",
+  "sector": "solid-waste-disposal",
+  "lon": 6.774024060312778,
+  "lat": 6.156938538133304,
+  "co2_t": 0
+ },
+ {
+  "name": "Solu, Ifo, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.199339318562346,
+  "lat": 6.811917453636466,
+  "co2_t": 0
+ },
+ {
+  "name": "Oshodi/Isolo, Lagos, 100263",
+  "sector": "solid-waste-disposal",
+  "lon": 3.287573764510285,
+  "lat": 6.555614245009594,
+  "co2_t": 0
+ },
+ {
+  "name": "Atinuke Atobajaye Crescent, Oshodi/Isolo, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.32315728757278,
+  "lat": 6.510071966782595,
+  "co2_t": 0
+ },
+ {
+  "name": "Akute-Oja, Ifo, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.374659828780599,
+  "lat": 6.678739087266576,
+  "co2_t": 0
+ },
+ {
+  "name": "Nnewi, Nnewi North, Anambra",
+  "sector": "solid-waste-disposal",
+  "lon": 6.90687095173373,
+  "lat": 6.012197084367163,
+  "co2_t": 0
+ },
+ {
+  "name": "Municipal Area Council, Federal Capital Territory, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 7.339278294931075,
+  "lat": 9.02844549266579,
+  "co2_t": 0
+ },
+ {
+  "name": "Onihale, Ifo, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.216082588885397,
+  "lat": 6.762313893252934,
+  "co2_t": 0
+ },
+ {
+  "name": "Eko Bridge, Alagbede, Surulere",
+  "sector": "solid-waste-disposal",
+  "lon": 3.376200615613854,
+  "lat": 6.473344877449573,
+  "co2_t": 0
+ },
+ {
+  "name": "Ibb Road, Police Barrack, Fagge D2",
+  "sector": "solid-waste-disposal",
+  "lon": 8.518728585585752,
+  "lat": 12.013344862735226,
+  "co2_t": 0
+ },
+ {
+  "name": "Akure North, Ondo, 340223",
+  "sector": "solid-waste-disposal",
+  "lon": 5.240190655439122,
+  "lat": 7.219764043698029,
+  "co2_t": 0
+ },
+ {
+  "name": "Enugu - Port Harcourt Expressway, Iriebe, Obio/Akpor",
+  "sector": "solid-waste-disposal",
+  "lon": 7.082771963003947,
+  "lat": 4.862942286416615,
+  "co2_t": 0
+ },
+ {
+  "name": "Oke-Aro, Ifo, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.320206482647506,
+  "lat": 6.676904579182433,
+  "co2_t": 0
+ },
+ {
+  "name": "Ojo, Lagos, 100266",
+  "sector": "solid-waste-disposal",
+  "lon": 3.222110388671465,
+  "lat": 6.453248227122699,
+  "co2_t": 0
+ },
+ {
+  "name": "Sango-Otta, Ado Odo/Ota, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.250609233812843,
+  "lat": 6.716810775347271,
+  "co2_t": 0
+ },
+ {
+  "name": "Ijegun, Alimosho, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.258763671299378,
+  "lat": 6.512738313512043,
+  "co2_t": 0
+ },
+ {
+  "name": "Shagamu, Ogun, 121006",
+  "sector": "solid-waste-disposal",
+  "lon": 3.455876362346942,
+  "lat": 6.735925790416303,
+  "co2_t": 0
+ },
+ {
+  "name": "Ojo, Lagos, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 3.193438011536458,
+  "lat": 6.450625202085112,
+  "co2_t": 0
+ },
+ {
+  "name": "Rumurolu, Obio/Akpor, Rivers",
+  "sector": "solid-waste-disposal",
+  "lon": 7.059751418469683,
+  "lat": 4.839921741882352,
+  "co2_t": 0
+ },
+ {
+  "name": "Oke, Ifo, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.39898932124856,
+  "lat": 6.650271537557256,
+  "co2_t": 0
+ },
+ {
+  "name": "Aba North, Abia, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 7.387602579408071,
+  "lat": 5.098692404426578,
+  "co2_t": 0
+ },
+ {
+  "name": "Mgbu-Oba, Obio/Akpor, Rivers",
+  "sector": "solid-waste-disposal",
+  "lon": 6.971849747964787,
+  "lat": 4.845473673954386,
+  "co2_t": 0
+ },
+ {
+  "name": "Wado City, Delta, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 5.76828382759091,
+  "lat": 5.504711054957648,
+  "co2_t": 0
+ },
+ {
+  "name": "Ifo, Ogun, Nigeria",
+  "sector": "solid-waste-disposal",
+  "lon": 3.191254868436841,
+  "lat": 6.84075988779824,
+  "co2_t": 0
+ },
+ {
+  "name": "Olori, Ifo, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.357998459815284,
+  "lat": 6.68926364431435,
+  "co2_t": 0
+ },
+ {
+  "name": "Ijako, Ado Odo/Ota, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.214680350737078,
+  "lat": 6.738002467265667,
+  "co2_t": 0
+ },
+ {
+  "name": "Igando Oloja, Ibeju Lekki, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.788996345632618,
+  "lat": 6.470683891369365,
+  "co2_t": 0
+ },
+ {
+  "name": "Iseri-Osun, Alimosho, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.278256842686978,
+  "lat": 6.521331590921889,
+  "co2_t": 0
+ },
+ {
+  "name": "Maba, Obafemi Owode, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.441117901487778,
+  "lat": 6.774686938940231,
+  "co2_t": 0
+ },
+ {
+  "name": "Alaba Taiwo St, Akinde, Ifako/Ijaye",
+  "sector": "solid-waste-disposal",
+  "lon": 3.279921405990791,
+  "lat": 6.67808975777887,
+  "co2_t": 0
+ },
+ {
+  "name": "Sagamu Road, Konigbagbe, Shagamu",
+  "sector": "solid-waste-disposal",
+  "lon": 3.601093148843671,
+  "lat": 6.812259664888064,
+  "co2_t": 0
+ },
+ {
+  "name": "Ijora, Apapa, Lagos",
+  "sector": "solid-waste-disposal",
+  "lon": 3.361276706161819,
+  "lat": 6.470812335239531,
+  "co2_t": 0
+ },
+ {
+  "name": "Asipa, Ewekoro, Ogun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.261152087063802,
+  "lat": 7.052666321709278,
+  "co2_t": 0
+ },
+ {
+  "name": "Bariga, Abule Ijesha, Shomolu",
+  "sector": "solid-waste-disposal",
+  "lon": 3.400224543055129,
+  "lat": 6.530125735783642,
+  "co2_t": 0
+ },
+ {
+  "name": "Olusosun",
+  "sector": "solid-waste-disposal",
+  "lon": 3.378510475,
+  "lat": 6.59272532,
+  "co2_t": 0
+ },
+ {
+  "name": "Eneka",
+  "sector": "solid-waste-disposal",
+  "lon": 7.0429872,
+  "lat": 4.8904136,
+  "co2_t": 0
+ },
+ {
+  "name": "Awotan (Apete) Dumpsite",
+  "sector": "solid-waste-disposal",
+  "lon": 3.84910556,
+  "lat": 7.463069444,
+  "co2_t": 0
+ },
+ {
+  "name": "Lapite",
+  "sector": "solid-waste-disposal",
+  "lon": 3.912607472144356,
+  "lat": 7.569898142051196,
+  "co2_t": 0
+ },
+ {
+  "name": "Ajakanga Dumpsite",
+  "sector": "solid-waste-disposal",
+  "lon": 3.84063888889,
+  "lat": 7.31251111111,
+  "co2_t": 0
+ },
+ {
+  "name": "Abule Egba",
+  "sector": "solid-waste-disposal",
+  "lon": 3.301832608599179,
+  "lat": 6.639650119549841,
+  "co2_t": 0
+ },
+ {
+  "name": "Solous",
+  "sector": "solid-waste-disposal",
+  "lon": 3.253802697,
+  "lat": 6.570991605,
+  "co2_t": 0
+ },
+ {
+  "name": "Okpella Cement power station",
+  "sector": "electricity-generation",
+  "lon": 6.4624,
+  "lat": 7.3442,
+  "co2_t": 0
+ },
+ {
+  "name": "Unknown name",
+  "sector": "industrial-wastewater-treatment-and-discharge",
+  "lon": 4.53517711979083,
+  "lat": 8.45102912723278,
+  "co2_t": 0
+ },
+ {
+  "name": "Sam Mbakwe International Cargo Airport",
+  "sector": "international-aviation",
+  "lon": 7.20603,
+  "lat": 5.42706,
+  "co2_t": 0
+ },
+ {
+  "name": "Gateway International Airport",
+  "sector": "domestic-aviation",
+  "lon": 3.7106,
+  "lat": 6.9392,
+  "co2_t": 0
+ },
+ {
+  "name": "Pennington",
+  "sector": "domestic-shipping",
+  "lon": 5.887774,
+  "lat": 4.288883,
+  "co2_t": 0
+ },
+ {
+  "name": "Sea Eagle Terminal",
+  "sector": "international-shipping",
+  "lon": 5.316663,
+  "lat": 4.799995,
+  "co2_t": 0
+ },
+ {
+  "name": "Delta Steel Company,Ovwian Delta",
+  "sector": "international-shipping",
+  "lon": 5.77102,
+  "lat": 5.486411,
+  "co2_t": 0
+ },
+ {
+  "name": "Obajana Cement power station",
+  "sector": "electricity-generation",
+  "lon": 6.4295,
+  "lat": 7.9229,
+  "co2_t": 0
+ },
+ {
+  "name": "Notore Industrial Complex,Onne",
+  "sector": "international-shipping",
+  "lon": 7.119184,
+  "lat": 4.722884,
+  "co2_t": 0
+ },
+ {
+  "name": "Notore Industrial Complex,Onne",
+  "sector": "domestic-shipping",
+  "lon": 7.119184,
+  "lat": 4.722884,
+  "co2_t": 0
+ },
+ {
+  "name": "Unknown name",
+  "sector": "domestic-shipping",
+  "lon": 7.3535,
+  "lat": 4.8736,
+  "co2_t": 0
+ }
+]

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Where Nigeria's fossil CO2 comes from: 15 verified hotspots from EDGAR, Climate TRACE, MODIS flares, Sentinel-5P NO2 and AlphaEarth, with Google Earth imagery 2006-2026. Prepared by Dinar Wali.">
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>Nigeria CO₂ Hotspots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single reading column (~72ch) that widens for maps, chart and the hotspot atlas strips. */
+:root{
+  --bg:#f7f7f4; --surface:#ffffff; --ink:#15181c; --ink-2:#4b5058; --ink-3:#7a7f87; --rule:#dcdcd5;
+  --accent:#c2410c;           /* flare orange */
+  --s1:#2a78d6; --s2:#eb6834; /* EDGAR blue, Climate TRACE orange */
+  --bad-bg:#fbe9e7; --bad-ink:#9f1d1d;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b9bec6; --ink-3:#8b919a; --rule:#2e3238;
+  --accent:#f0773c; --s1:#3987e5; --s2:#d95926; --bad-bg:#3a1d1b; --bad-ink:#ffb4a8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b9bec6; --ink-3:#8b919a; --rule:#2e3238;
+  --accent:#f0773c; --s1:#3987e5; --s2:#d95926; --bad-bg:#3a1d1b; --bad-ink:#ffb4a8; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:40px 80px}
+.col{max-width:72ch}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.01em}
+h2{font-size:1.75rem;margin-top:64px;margin-bottom:12px}
+h3{font-size:1.25rem}
+p{margin:0 0 14px}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.lede{font-size:1.15rem;color:var(--ink-2);margin-top:16px}
+.byline{font:.8rem var(--mono);color:var(--ink-3);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:36px 0 8px;border-top:1px solid var(--rule);padding-top:22px}
+.stat b{display:block;font:600 2.3rem/1 var(--display);font-variant-numeric:tabular-nums}
+.stat span{display:block;color:var(--ink-2);font-size:.9rem;margin-top:6px}
+ul.find{padding-left:1.1rem;margin:0}
+ul.find li{margin-bottom:10px}
+figure{margin:0}
+.map{margin-top:20px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:10px}
+.map img{display:block;width:100%;height:auto;border-radius:3px}
+.map figcaption,.note{font-size:.82rem;color:var(--ink-3);margin-top:8px}
+.chart{overflow-x:auto;margin-top:14px}
+.rank{width:100%;min-width:620px;height:auto;font-family:var(--body)}
+.rank .grid{stroke:var(--rule);stroke-width:1}
+.rank .tick{fill:var(--ink-3);font:11px var(--mono)}
+.rank .lab{fill:var(--ink);font-size:12px}
+.rank .val{fill:var(--ink-2);font:11px var(--mono)}
+.rank .muted{fill:var(--ink-3)}
+.rank .s1{fill:var(--s1)} .rank .s2{fill:var(--s2)}
+.rank .bar:hover rect:first-child{opacity:.8}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.85rem;color:var(--ink-2);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px}
+.spot{border-top:1px solid var(--rule);padding-top:26px;margin-top:34px}
+.spot header{display:flex;gap:14px;align-items:baseline}
+.hid{font:500 .85rem var(--mono);color:var(--accent);min-width:2.6em}
+.where{font-size:.85rem;color:var(--ink-3);margin:4px 0 0}
+.pill{display:inline-block;font:500 .72rem var(--mono);padding:2px 8px;border-radius:99px;border:1px solid var(--rule);color:var(--ink-2)}
+.pill.bad{background:var(--bad-bg);color:var(--bad-ink);border-color:transparent}
+.story{max-width:78ch;margin-top:12px;color:var(--ink-2)}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:8px}
+.strip img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:3px;background:var(--rule)}
+.strip figcaption{font:.7rem/1.3 var(--mono);color:var(--ink-3);margin-top:4px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 24px;margin:16px 0 0}
+.fact{min-width:0}
+.fact dt{font:.7rem var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+.fact dd{margin:2px 0 0;font-variant-numeric:tabular-nums;font-size:.92rem}
+.muted{color:var(--ink-3)}
+.rejected .strip{opacity:.75}
+.tbl{overflow-x:auto;margin-top:14px;border:1px solid var(--rule);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:.84rem}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--rule)}
+th{font:500 .7rem var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);background:var(--surface)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.cols>div{min-width:0}
+code{font-family:var(--mono);font-size:.85em;background:var(--surface);padding:1px 5px;border-radius:3px;border:1px solid var(--rule)}
+a{color:var(--accent)}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font:.8rem var(--mono);margin-top:22px}
+nav.toc a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule)}
+@media (max-width:720px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}.strip figure:nth-child(n+4){display:none}}
+</style>
+
+<div class="wrap">
+<div class="col">
+  <div class="eyebrow">RegenX geospatial · Nigeria · October 2026</div>
+  <h1>Nigeria CO₂ Hotspots</h1>
+  <p class="lede">Where Nigeria's fossil carbon dioxide comes from, checked from orbit. I combined the EDGAR 2025 emission grid, Climate TRACE facility estimates, MODIS gas-flare persistence, Sentinel-5P NO₂ and AlphaEarth embeddings. Each site has imagery from 2000–02, 2016–17 and 2025–26.</p>
+  <p class="byline">Dinar Wali · analysis in Google Earth Engine + Python · data to Sep 2026</p>
+  <div class="col" style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px">
+<a href="deck/" style="background:var(--accent);color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600">View the presentation (44 slides)</a>
+<a href="atlas/" style="border:1px solid var(--accent);padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600">Google Earth atlas</a>
+<a href="downloads/Nigeria_CO2_Hotspots_Unified_Dinar_Wali.pdf" style="padding:10px 6px">Deck PDF</a>
+<a href="downloads/Nigeria_CO2_Hotspots_Unified_Dinar_Wali.pptx" style="padding:10px 6px">Deck PPTX</a>
+<a href="downloads/Nigeria_CO2_Hotspots.kmz" style="padding:10px 6px">KMZ</a>
+<a href="downloads/hotspots.csv" style="padding:10px 6px">CSV</a>
+<a href="https://github.com/dinarwali4/nigeria-co2-hotspots" style="padding:10px 6px">Source on GitHub</a></div>
+  <nav class="toc"><a href="#findings">Findings</a><a href="#map">Map</a><a href="#ranking">Ranking</a><a href="#flaring">Gas flaring</a><a href="#atlas">Hotspot atlas</a><a href="#table">EDGAR top 20</a><a href="#method">Method</a><a href="#earth">Google Earth</a></nav>
+</div>
+
+<div class="stats">
+  <div class="stat"><b>137.6 Mt</b><span>fossil CO₂ in 2025 (EDGAR), up 58% from 87.0 Mt in 2005</span></div>
+  <div class="stat"><b>0.57%</b><span>of Nigeria's land (4,425 km²) emits half of all fossil CO₂</span></div>
+  <div class="stat"><b>15</b><span>verified hotspots: 9 industrial, 2 urban, 2 power, 2 gas-flare. 1 more candidate rejected</span></div>
+</div>
+
+<section id="findings" class="col">
+  <h2>Findings</h2>
+  <ul class="find">
+    <li><b>Two coastal clusters dominate.</b> Lagos (12.2 Mt, 9.7%) and Port Harcourt–Onne–Eleme (9.3 Mt, 7.4%) together emit one sixth of the national total. Bonny Island LNG adds 5.4 Mt from only 100 km².</li>
+    <li><b>Cement is the fastest-growing source.</b> Six cement works make the list (Obajana, Okpotu, Ibese, Sokoto, Gboko, Mfamosing). None existed in the 2000–02 Landsat frames. Okpotu, Mfamosing and Gboko show NO₂ growth well above the national background.</li>
+    <li><b>The Dangote refinery is the newest major emitter.</b> It went from bush in 2002 to sand fill in 2017 to a complete refinery in 2025. Climate TRACE estimates 2.65 Mt in 2024, and EDGAR's 1 km grid does not show it yet.</li>
+    <li><b>The emission inventory misplaces gas flares.</b> EDGAR spreads oil-and-gas emissions over coarse 0.1° blocks. The flares that MODIS sees burning on 60+ days a year mostly sit outside those blocks. Satellite fire persistence is the better locator.</li>
+    <li><b>One inventory hotspot is false.</b> A 0.69 Mt single-pixel point in southern Kaduna has no plant in any image and no NO₂ signal.</li>
+  </ul>
+</section>
+
+<section id="map">
+  <h2 class="col">National map</h2>
+  <figure class="map"><img src="map_national.jpg" alt="Map of Nigeria fossil CO2 emissions with 16 hotspots and gas flares" width="1600" height="1370">
+  <figcaption>EDGAR 2025 1 km fossil CO₂ for 2024, log scale. Circles are the 16 candidate hotspots. Orange and pink dots are 1 km pixels with MODIS fire on at least 60 of 730 days.</figcaption></figure>
+</section>
+
+<section id="ranking">
+  <h2 class="col">Ranking</h2>
+  <p class="col">Two independent inventories per site. The blue bar is the EDGAR 1 km cluster around the site (all sectors). The orange bar is Climate TRACE's estimate for the largest single facility there. Where they disagree strongly, the satellite imagery shows which is right: EDGAR misses the new Dangote refinery, Okpotu and Sokoto plants.</p>
+  <div class="legend"><span><i style="background:var(--s1)"></i>EDGAR 1 km cluster, 2024</span><span><i style="background:var(--s2)"></i>Climate TRACE largest facility, 2024</span></div>
+  <div class="chart"><svg viewBox="0 0 826 479" role="img" aria-label="Hotspot emissions ranking" class="rank">
+<line x1="196.0" x2="196.0" y1="20" y2="457" class="grid"/><text x="196.0" y="473" class="tick" text-anchor="middle">0</text>
+<line x1="282.2" x2="282.2" y1="20" y2="457" class="grid"/><text x="282.2" y="473" class="tick" text-anchor="middle">2</text>
+<line x1="368.3" x2="368.3" y1="20" y2="457" class="grid"/><text x="368.3" y="473" class="tick" text-anchor="middle">4</text>
+<line x1="454.5" x2="454.5" y1="20" y2="457" class="grid"/><text x="454.5" y="473" class="tick" text-anchor="middle">6</text>
+<line x1="540.6" x2="540.6" y1="20" y2="457" class="grid"/><text x="540.6" y="473" class="tick" text-anchor="middle">8</text>
+<line x1="626.8" x2="626.8" y1="20" y2="457" class="grid"/><text x="626.8" y="473" class="tick" text-anchor="middle">10</text>
+<line x1="712.9" x2="712.9" y1="20" y2="457" class="grid"/><text x="712.9" y="473" class="tick" text-anchor="middle">12</text>
+<text x="760" y="473" class="tick">Mt CO₂/yr</text>
+<text x="186" y="41" class="lab" text-anchor="end">H01 · Lagos metro</text>
+<g class="bar"><title>H01 — EDGAR 1 km cluster, 2024: 12.24 Mt</title><rect x="196" y="26" width="527.1" height="11" rx="2" class="s1"/><rect x="196" y="24" width="560" height="15" fill="transparent"/><text x="729.1" y="35" class="val">12.24</text></g>
+<g class="bar"><title>H01 — Climate TRACE largest facility, 2024: 2.06 Mt</title><rect x="196" y="39" width="88.7" height="11" rx="2" class="s2"/><rect x="196" y="37" width="560" height="15" fill="transparent"/><text x="290.7" y="48" class="val">2.06</text></g>
+<text x="186" y="74" class="lab" text-anchor="end">H03 · Port Harcourt</text>
+<g class="bar"><title>H03 — EDGAR 1 km cluster, 2024: 9.33 Mt</title><rect x="196" y="59" width="401.8" height="11" rx="2" class="s1"/><rect x="196" y="57" width="560" height="15" fill="transparent"/><text x="603.8" y="68" class="val">9.33</text></g>
+<g class="bar"><title>H03 — Climate TRACE largest facility, 2024: 3.15 Mt</title><rect x="196" y="72" width="135.7" height="11" rx="2" class="s2"/><rect x="196" y="70" width="560" height="15" fill="transparent"/><text x="337.7" y="81" class="val">3.15</text></g>
+<text x="186" y="107" class="lab" text-anchor="end">H05 · Obajana Cement (Dangote)</text>
+<g class="bar"><title>H05 — EDGAR 1 km cluster, 2024: 6.13 Mt</title><rect x="196" y="92" width="264.0" height="11" rx="2" class="s1"/><rect x="196" y="90" width="560" height="15" fill="transparent"/><text x="466.0" y="101" class="val">6.13</text></g>
+<g class="bar"><title>H05 — Climate TRACE largest facility, 2024: 3.87 Mt</title><rect x="196" y="105" width="166.7" height="11" rx="2" class="s2"/><rect x="196" y="103" width="560" height="15" fill="transparent"/><text x="368.7" y="114" class="val">3.87</text></g>
+<text x="186" y="140" class="lab" text-anchor="end">H04 · Bonny Island</text>
+<g class="bar"><title>H04 — EDGAR 1 km cluster, 2024: 5.39 Mt</title><rect x="196" y="125" width="232.0" height="11" rx="2" class="s1"/><rect x="196" y="123" width="560" height="15" fill="transparent"/><text x="434.0" y="134" class="val">5.39</text></g>
+<g class="bar"><title>H04 — Climate TRACE largest facility, 2024: 0.59 Mt</title><rect x="196" y="138" width="25.4" height="11" rx="2" class="s2"/><rect x="196" y="136" width="560" height="15" fill="transparent"/><text x="227.4" y="147" class="val">0.59</text></g>
+<text x="186" y="173" class="lab" text-anchor="end">H06 · BUA Okpotu Cement</text>
+<text x="200" y="167" class="val muted">not in grid</text>
+<g class="bar"><title>H06 — Climate TRACE largest facility, 2024: 2.83 Mt</title><rect x="196" y="171" width="121.9" height="11" rx="2" class="s2"/><rect x="196" y="169" width="560" height="15" fill="transparent"/><text x="323.9" y="180" class="val">2.83</text></g>
+<text x="186" y="206" class="lab" text-anchor="end">H02 · Dangote Petroleum Refinery</text>
+<text x="200" y="200" class="val muted">not in grid</text>
+<g class="bar"><title>H02 — Climate TRACE largest facility, 2024: 2.65 Mt</title><rect x="196" y="204" width="114.0" height="11" rx="2" class="s2"/><rect x="196" y="202" width="560" height="15" fill="transparent"/><text x="316.0" y="213" class="val">2.65</text></g>
+<text x="186" y="239" class="lab" text-anchor="end">H08 · BUA Sokoto Cement (Kalambaina)</text>
+<text x="200" y="233" class="val muted">not in grid</text>
+<g class="bar"><title>H08 — Climate TRACE largest facility, 2024: 2.36 Mt</title><rect x="196" y="237" width="101.6" height="11" rx="2" class="s2"/><rect x="196" y="235" width="560" height="15" fill="transparent"/><text x="303.6" y="246" class="val">2.36</text></g>
+<text x="186" y="272" class="lab" text-anchor="end">H09 · Kano metro</text>
+<g class="bar"><title>H09 — EDGAR 1 km cluster, 2024: 2.30 Mt</title><rect x="196" y="257" width="98.9" height="11" rx="2" class="s1"/><rect x="196" y="255" width="560" height="15" fill="transparent"/><text x="300.9" y="266" class="val">2.30</text></g>
+<text x="200" y="279" class="val muted">no facility listed</text>
+<text x="186" y="305" class="lab" text-anchor="end">H07 · Ibese Cement (Dangote)</text>
+<g class="bar"><title>H07 — EDGAR 1 km cluster, 2024: 1.98 Mt</title><rect x="196" y="290" width="85.4" height="11" rx="2" class="s1"/><rect x="196" y="288" width="560" height="15" fill="transparent"/><text x="287.4" y="299" class="val">1.98</text></g>
+<g class="bar"><title>H07 — Climate TRACE largest facility, 2024: 2.19 Mt</title><rect x="196" y="303" width="94.5" height="11" rx="2" class="s2"/><rect x="196" y="301" width="560" height="15" fill="transparent"/><text x="296.5" y="312" class="val">2.19</text></g>
+<text x="186" y="338" class="lab" text-anchor="end">H11 · Azura-Edo / Ihovbor power</text>
+<g class="bar"><title>H11 — EDGAR 1 km cluster, 2024: 0.79 Mt</title><rect x="196" y="323" width="34.2" height="11" rx="2" class="s1"/><rect x="196" y="321" width="560" height="15" fill="transparent"/><text x="236.2" y="332" class="val">0.79</text></g>
+<g class="bar"><title>H11 — Climate TRACE largest facility, 2024: 2.12 Mt</title><rect x="196" y="336" width="91.4" height="11" rx="2" class="s2"/><rect x="196" y="334" width="560" height="15" fill="transparent"/><text x="293.4" y="345" class="val">2.12</text></g>
+<text x="186" y="371" class="lab" text-anchor="end">H10 · Ughelli power station</text>
+<g class="bar"><title>H10 — EDGAR 1 km cluster, 2024: 1.74 Mt</title><rect x="196" y="356" width="75.2" height="11" rx="2" class="s1"/><rect x="196" y="354" width="560" height="15" fill="transparent"/><text x="277.2" y="365" class="val">1.74</text></g>
+<g class="bar"><title>H10 — Climate TRACE largest facility, 2024: 1.81 Mt</title><rect x="196" y="369" width="77.9" height="11" rx="2" class="s2"/><rect x="196" y="367" width="560" height="15" fill="transparent"/><text x="279.9" y="378" class="val">1.81</text></g>
+<text x="186" y="404" class="lab" text-anchor="end">H12 · Gboko Cement (Dangote)</text>
+<g class="bar"><title>H12 — EDGAR 1 km cluster, 2024: 1.71 Mt</title><rect x="196" y="389" width="73.6" height="11" rx="2" class="s1"/><rect x="196" y="387" width="560" height="15" fill="transparent"/><text x="275.6" y="398" class="val">1.71</text></g>
+<g class="bar"><title>H12 — Climate TRACE largest facility, 2024: 1.18 Mt</title><rect x="196" y="402" width="50.9" height="11" rx="2" class="s2"/><rect x="196" y="400" width="560" height="15" fill="transparent"/><text x="252.9" y="411" class="val">1.18</text></g>
+<text x="186" y="437" class="lab" text-anchor="end">H13 · Mfamosing Cement (Lafarge)</text>
+<g class="bar"><title>H13 — EDGAR 1 km cluster, 2024: 1.56 Mt</title><rect x="196" y="422" width="67.2" height="11" rx="2" class="s1"/><rect x="196" y="420" width="560" height="15" fill="transparent"/><text x="269.2" y="431" class="val">1.56</text></g>
+<g class="bar"><title>H13 — Climate TRACE largest facility, 2024: 1.13 Mt</title><rect x="196" y="435" width="48.8" height="11" rx="2" class="s2"/><rect x="196" y="433" width="560" height="15" fill="transparent"/><text x="250.8" y="444" class="val">1.13</text></g>
+</svg></div>
+  <p class="note">Hover a bar for the exact value. Flare sites are not ranked here because neither inventory gives a per-site figure for them.</p>
+</section>
+
+<section id="flaring">
+  <h2 class="col">Gas flaring in the Niger Delta</h2>
+  <div class="cols">
+    <div><p>Flaring is Nigeria's best-known CO₂ source, but inventories place it badly. I mapped it directly: every 1 km MODIS pixel with fire on 60 or more of 730 days counts as a persistent fire. Savanna fires last days, so a pixel that burns for months is a flare.</p>
+    <p>That gives 156 pixels in 23 sites in 2024–25, and 75 pixels in 9 sites in 2014–15. All lie between 4.3° and 6.1° N, in the oil-producing belt and offshore.</p>
+    <p class="note">The jump in detections is not a measure of flared volume. MODIS's ageing orbits changed overpass times after 2020, and the World Bank's gas-flaring reports show Nigerian volumes falling. Use the sites, not the count, as the finding.</p></div>
+    <figure class="map" style="margin-top:0"><img src="map_niger_delta_flares.jpg" alt="Niger Delta map of persistent fire pixels in 2014-15 and 2024-25" width="1600" height="1120"><figcaption>Open pink: 2014–15. Filled orange: 2024–25. Size scales with detection days.</figcaption></figure>
+  </div>
+</section>
+
+<section id="atlas">
+  <h2 class="col">Hotspot atlas</h2>
+  <p class="col">Each site shows three time slices of true-colour imagery from Earth Engine, then the AlphaEarth embedding analysis from the original script. The script's k-means clustering is run per site with k = 8 and the same clusterer for 2017 and 2024. Its companion change map is the dot product of the 2017 and 2024 embedding vectors, where red means the surface changed.</p>
+  <article class="spot" id="h01">
+  <header><span class="hid">H01</span><div><h3>Lagos metro – Egbin power station / Ikorodu</h3>
+  <p class="where">Lagos · 6.564° N, 3.615° E · <span class="pill">Urban + power</span></p></div></header>
+  <p class="story">Nigeria's largest fossil-CO₂ cluster: 962 km² of Lagos with road transport, the Egbin gas plant and Ikeja–Agbara industry. Emissions roughly doubled 2005→2015, then flattened. NO₂ growth (+12%) is below the national background (+16.5%).</p>
+  <div class="strip"><figure><img src="img/H01_l7_2000-02.jpg" alt="H01 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H01_s2_2016-17.jpg" alt="H01 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H01_s2_2025-26.jpg" alt="H01 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H01_emb_k8_2024.jpg" alt="H01 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H01_emb_change_2017-2024.jpg" alt="H01 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>12.24 Mt · 962 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>10.3 → 17.5 → 18.8 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Egbin power station: 2.06 Mt<br>POWER BARGE EBUTE: 0.39 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.27</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+12% <span class='muted'>(-5% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.2% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h02">
+  <header><span class="hid">H02</span><div><h3>Dangote Petroleum Refinery, Lekki FTZ</h3>
+  <p class="where">Lagos · 6.455° N, 3.999° E · <span class="pill">Refinery (new 2024)</span></p></div></header>
+  <p class="story">Bush in 2000–02, a sand-filled platform in 2016–17, and a complete 650,000 bbl/day refinery with tank farms by 2025–26. Climate TRACE puts it at 2.65 Mt in 2024, its first operating year. EDGAR's 1 km grid does not show it yet. AlphaEarth flags 58% of the surrounding 2 km as changed since 2017.</p>
+  <div class="strip"><figure><img src="img/H02_l7_2000-02.jpg" alt="H02 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H02_s2_2016-17.jpg" alt="H02 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H02_s2_2025-26.jpg" alt="H02 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H02_emb_k8_2024.jpg" alt="H02 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H02_emb_change_2017-2024.jpg" alt="H02 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>Climate TRACE 2024</dt><dd>Dangote Petroleum Refinery: 2.65 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.61</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+22% <span class='muted'>(+6% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>58.2% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h03">
+  <header><span class="hid">H03</span><div><h3>Port Harcourt – Onne – Eleme industrial belt</h3>
+  <p class="where">Rivers · 4.835° N, 7.103° E · <span class="pill">Fertiliser + refinery + power</span></p></div></header>
+  <p class="story">Second-largest cluster: the Port Harcourt and Onne fertiliser complexes (3.15 + 1.64 Mt), the Eleme refineries, and the Afam V/VI power stations. It has the highest NO₂ of any site (×2.34 the national median), and persistent flares sit on its southern and eastern edges.</p>
+  <div class="strip"><figure><img src="img/H03_l7_2000-02.jpg" alt="H03 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H03_s2_2016-17.jpg" alt="H03 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H03_s2_2025-26.jpg" alt="H03 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H03_emb_k8_2024.jpg" alt="H03 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H03_emb_change_2017-2024.jpg" alt="H03 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>9.33 Mt · 616 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>8.9 → 11.8 → 16.6 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Port Harcourt Fertilizer Complex: 3.15 Mt<br>Indorama Eleme Petrochemical, Port Harcourt: 0.38 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.34</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+10% <span class='muted'>(-6% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.4% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h04">
+  <header><span class="hid">H04</span><div><h3>Bonny Island – NLNG</h3>
+  <p class="where">Rivers · 4.430° N, 7.160° E · <span class="pill">LNG + gas</span></p></div></header>
+  <p class="story">The NLNG trains and their power plant on Bonny Island. Bonny is the national LNG export point. CO₂ stripped from the feed gas, plus fuel burned on site, gives a 5.4 Mt EDGAR cluster in only 100 km². Persistent fire pixels sit on the plant every year.</p>
+  <div class="strip"><figure><img src="img/H04_l7_2000-02.jpg" alt="H04 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H04_s2_2016-17.jpg" alt="H04 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H04_s2_2025-26.jpg" alt="H04 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H04_emb_k8_2024.jpg" alt="H04 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H04_emb_change_2017-2024.jpg" alt="H04 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>5.39 Mt · 100 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>2.4 → 4.4 → 7.0 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Bonny Island LNG power plant: 0.59 Mt<br>BONNY ISLAND TERMINAL: 0.14 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.95</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>-5% <span class='muted'>(-21% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>2.3% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h05">
+  <header><span class="hid">H05</span><div><h3>Obajana Cement (Dangote)</h3>
+  <p class="where">Kogi · 7.929° N, 6.422° E · <span class="pill">Cement</span></p></div></header>
+  <p class="story">Africa's largest cement plant. The 2000–02 frame is untouched savanna; the plant was built later that decade. EDGAR's emissions for this cell rose from 0.7 to 6.5 Mt between 2005 and 2025. Climate TRACE estimates 3.87 Mt for the plant itself.</p>
+  <div class="strip"><figure><img src="img/H05_l7_2000-02.jpg" alt="H05 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H05_s2_2016-17.jpg" alt="H05 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H05_s2_2025-26.jpg" alt="H05 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H05_emb_k8_2024.jpg" alt="H05 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H05_emb_change_2017-2024.jpg" alt="H05 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>6.13 Mt · 100 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>0.7 → 4.4 → 6.5 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Dangote Cement Obajana Cement Plant: 3.87 Mt<br>Obajana Cement power station: 0.00 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.16</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+23% <span class='muted'>(+7% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>1.1% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h06">
+  <header><span class="hid">H06</span><div><h3>BUA Okpotu Cement</h3>
+  <p class="where">Benue · 7.355° N, 6.402° E · <span class="pill">Cement</span></p></div></header>
+  <p class="story">Absent from EDGAR's grid, but Climate TRACE estimates 2.83 Mt. Imagery shows a small works in 2016–17 grown into a multi-line plant with new quarry benches by 2025–26. NO₂ rose 45% between 2019 and 2025, the strongest rise above background of any site.</p>
+  <div class="strip"><figure><img src="img/H06_l7_2000-02.jpg" alt="H06 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H06_s2_2016-17.jpg" alt="H06 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H06_s2_2025-26.jpg" alt="H06 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H06_emb_k8_2024.jpg" alt="H06 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H06_emb_change_2017-2024.jpg" alt="H06 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>Climate TRACE 2024</dt><dd>BUA International Okpotu Cement Plant: 2.83 Mt<br>Dangote Cement Okpella Cement Plant: 0.30 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.05</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+45% <span class='muted'>(+29% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>1.4% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h07">
+  <header><span class="hid">H07</span><div><h3>Ibese Cement (Dangote), Ogun</h3>
+  <p class="where">Ogun · 7.006° N, 3.050° E · <span class="pill">Cement</span></p></div></header>
+  <p class="story">Dangote's Ibese works in Ogun: no plant in 2000–02, kilns by 2016–17, and expanded quarries and clinker storage by 2025–26. 2.0–2.2 Mt/yr. NO₂ ×2.28 the national median.</p>
+  <div class="strip"><figure><img src="img/H07_l7_2000-02.jpg" alt="H07 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H07_s2_2016-17.jpg" alt="H07 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H07_s2_2025-26.jpg" alt="H07 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H07_emb_k8_2024.jpg" alt="H07 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H07_emb_change_2017-2024.jpg" alt="H07 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>1.98 Mt · 101 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>0.3 → 1.6 → 2.3 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Dangote Cement Ojibawo Cement Plant: 2.19 Mt<br>Ibese Cement power station: 0.02 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.28</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+26% <span class='muted'>(+9% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>1.7% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h08">
+  <header><span class="hid">H08</span><div><h3>BUA Sokoto Cement (Kalambaina)</h3>
+  <p class="where">Sokoto · 13.059° N, 5.172° E · <span class="pill">Cement</span></p></div></header>
+  <p class="story">The far north's only large point source, at about 2.4 Mt (Climate TRACE). New kiln lines and quarry floors appear between 2016–17 and 2025–26. EDGAR under-allocates it.</p>
+  <div class="strip"><figure><img src="img/H08_l7_2000-02.jpg" alt="H08 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H08_s2_2016-17.jpg" alt="H08 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H08_s2_2025-26.jpg" alt="H08 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H08_emb_k8_2024.jpg" alt="H08 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H08_emb_change_2017-2024.jpg" alt="H08 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>Climate TRACE 2024</dt><dd>BUA International Sokoto Cement Plant: 2.36 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.36</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+20% <span class='muted'>(+3% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>3.3% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h09">
+  <header><span class="hid">H09</span><div><h3>Kano metro</h3>
+  <p class="where">Kano · 11.980° N, 8.526° E · <span class="pill">Urban + industry</span></p></div></header>
+  <p class="story">A transport-dominated urban cluster of 310 km². This hotspot comes from road fuel and generators, not one chimney. Emissions rose from 2.3 to 4.1 Mt between 2005 and 2025 at 0.1°.</p>
+  <div class="strip"><figure><img src="img/H09_l7_2000-02.jpg" alt="H09 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H09_s2_2016-17.jpg" alt="H09 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H09_s2_2025-26.jpg" alt="H09 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H09_emb_k8_2024.jpg" alt="H09 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H09_emb_change_2017-2024.jpg" alt="H09 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>2.30 Mt · 310 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>2.3 → 3.4 → 4.1 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Ibb Road, Police Barrack, Fagge D2: 0.00 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.21</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+12% <span class='muted'>(-4% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.0% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h10">
+  <header><span class="hid">H10</span><div><h3>Ughelli power station</h3>
+  <p class="where">Delta · 5.540° N, 5.915° E · <span class="pill">Gas power</span></p></div></header>
+  <p class="story">Ughelli gas-fired station (1.81 Mt, Climate TRACE). Persistent flares from the surrounding Ughelli fields sit just south-east. EDGAR's estimate for the 0.1° cells here fell slightly from 3.2 to 2.6 Mt over 2005–2025.</p>
+  <div class="strip"><figure><img src="img/H10_l7_2000-02.jpg" alt="H10 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H10_s2_2016-17.jpg" alt="H10 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H10_s2_2025-26.jpg" alt="H10 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H10_emb_k8_2024.jpg" alt="H10 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H10_emb_change_2017-2024.jpg" alt="H10 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>1.74 Mt · 113 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>3.2 → 2.5 → 2.6 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Ughelli power station: 1.81 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×2.07</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+18% <span class='muted'>(+1% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>1.8% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h11">
+  <header><span class="hid">H11</span><div><h3>Azura-Edo / Ihovbor power, Benin City</h3>
+  <p class="where">Edo · 6.410° N, 5.681° E · <span class="pill">Gas power</span></p></div></header>
+  <p class="story">Azura-Edo IPP: cleared ground in 2016–17 and an operating 461 MW plant by 2025–26, beside the older Ihovbor station. Climate TRACE estimates 2.12 Mt for Azura alone.</p>
+  <div class="strip"><figure><img src="img/H11_l7_2000-02.jpg" alt="H11 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H11_s2_2016-17.jpg" alt="H11 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H11_s2_2025-26.jpg" alt="H11 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H11_emb_k8_2024.jpg" alt="H11 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H11_emb_change_2017-2024.jpg" alt="H11 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>0.79 Mt · 52 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>0.4 → 1.1 → 1.3 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Azura-Edo IPP power station: 2.12 Mt<br>Ihovbor power station: 0.60 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.76</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+10% <span class='muted'>(-6% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.2% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h12">
+  <header><span class="hid">H12</span><div><h3>Gboko Cement (Dangote)</h3>
+  <p class="where">Benue · 7.411° N, 8.974° E · <span class="pill">Cement</span></p></div></header>
+  <p class="story">Dangote Gboko in Benue: quarry pit and kiln lines grow steadily across the three frames. NO₂ rose 31% between 2019 and 2025, which is above the background.</p>
+  <div class="strip"><figure><img src="img/H12_l7_2000-02.jpg" alt="H12 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H12_s2_2016-17.jpg" alt="H12 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H12_s2_2025-26.jpg" alt="H12 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H12_emb_k8_2024.jpg" alt="H12 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H12_emb_change_2017-2024.jpg" alt="H12 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>1.71 Mt · 100 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>0.2 → 1.3 → 1.9 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Dangote Cement Gboko Cement Plant: 1.18 Mt<br>Gboko Cement power station: 0.00 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.23</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+31% <span class='muted'>(+15% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.6% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h13">
+  <header><span class="hid">H13</span><div><h3>Mfamosing Cement (Lafarge)</h3>
+  <p class="where">Cross River · 5.064° N, 8.515° E · <span class="pill">Cement</span></p></div></header>
+  <p class="story">Lafarge Mfamosing near Calabar: a rural landscape in 2000–02, the plant and quarry by 2016–17, and a second quarry by 2025–26. NO₂ rose 36% between 2019 and 2025.</p>
+  <div class="strip"><figure><img src="img/H13_l7_2000-02.jpg" alt="H13 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H13_s2_2016-17.jpg" alt="H13 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H13_s2_2025-26.jpg" alt="H13 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H13_emb_k8_2024.jpg" alt="H13 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H13_emb_change_2017-2024.jpg" alt="H13 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>1.56 Mt · 100 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>0.2 → 1.2 → 1.7 Mt</dd></div><div class="fact"><dt>Climate TRACE 2024</dt><dd>Lafarge Africa Mfamosing Cement Plant: 1.13 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.54</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+36% <span class='muted'>(+19% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.2% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h14">
+  <header><span class="hid">H14</span><div><h3>Gas-flare cluster, Ogba/Egbema (largest 2024–25)</h3>
+  <p class="where">Rivers · 5.517° N, 6.681° E · <span class="pill">Gas flaring</span></p></div></header>
+  <p class="story">The largest persistent gas-flare site of 2024–25, with fire on up to 229 of 730 days across 19 km². It was not in the 2014–15 top list. Climate TRACE assigns 9.5 Mt to the onshore conventional fields that include this area.</p>
+  <div class="strip"><figure><img src="img/H14_l7_2000-02.jpg" alt="H14 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H14_s2_2016-17.jpg" alt="H14 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H14_s2_2025-26.jpg" alt="H14 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H14_emb_k8_2024.jpg" alt="H14 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H14_emb_change_2017-2024.jpg" alt="H14 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>MODIS persistent fire 2024–25</dt><dd>19 km² · max 229 of 730 days</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.22</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+6% <span class='muted'>(-11% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>2.0% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot" id="h15">
+  <header><span class="hid">H15</span><div><h3>Gas-flare cluster, Delta/Edo border (largest 2014–15)</h3>
+  <p class="where">Delta · 6.011° N, 5.872° E · <span class="pill">Gas flaring</span></p></div></header>
+  <p class="story">The largest flare site of 2014–15, with fire on up to 255 days, and still second in 2024–25. Flares emit little NO₂ (×1.16), so the satellite fire record is the evidence here, not the NO₂ map.</p>
+  <div class="strip"><figure><img src="img/H15_l7_2000-02.jpg" alt="H15 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H15_s2_2016-17.jpg" alt="H15 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H15_s2_2025-26.jpg" alt="H15 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H15_emb_k8_2024.jpg" alt="H15 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H15_emb_change_2017-2024.jpg" alt="H15 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>MODIS persistent fire 2024–25</dt><dd>14 km² · max 225 of 730 days</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.16</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>-0% <span class='muted'>(-17% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.2% of 2 km radius</dd></div></dl>
+</article>
+<article class="spot rejected" id="h16">
+  <header><span class="hid">H16</span><div><h3>Unexplained EDGAR point, southern Kaduna</h3>
+  <p class="where">Kaduna · 9.495° N, 7.695° E · <span class="pill bad">Rejected</span></p></div></header>
+  <p class="story">Rejected. EDGAR puts 0.69 Mt into a single 1 km pixel here that first appears in 2025. The imagery shows farmland and villages, NO₂ is at background (×1.11), and no facility is listed. This is an inventory allocation error, not an emitter.</p>
+  <div class="strip"><figure><img src="img/H16_l7_2000-02.jpg" alt="H16 Landsat 7 · 2000–02" loading="lazy" width="640" height="640"><figcaption>Landsat 7 · 2000–02</figcaption></figure><figure><img src="img/H16_s2_2016-17.jpg" alt="H16 Sentinel-2 · 2016–17" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2016–17</figcaption></figure><figure><img src="img/H16_s2_2025-26.jpg" alt="H16 Sentinel-2 · 2025–26 (latest)" loading="lazy" width="640" height="640"><figcaption>Sentinel-2 · 2025–26 (latest)</figcaption></figure><figure><img src="img/H16_emb_k8_2024.jpg" alt="H16 AlphaEarth k-means (k=8) · 2024" loading="lazy" width="640" height="640"><figcaption>AlphaEarth k-means (k=8) · 2024</figcaption></figure><figure><img src="img/H16_emb_change_2017-2024.jpg" alt="H16 AlphaEarth change 2017→2024 (red = changed)" loading="lazy" width="640" height="640"><figcaption>AlphaEarth change 2017→2024 (red = changed)</figcaption></figure></div>
+  <dl class="facts"><div class="fact"><dt>EDGAR cluster 2024</dt><dd>0.69 Mt · 1 km²</dd></div><div class="fact"><dt>EDGAR 0.1° 2005 → 2015 → 2025</dt><dd>0.0 → 0.0 → 0.7 Mt</dd></div><div class="fact"><dt>NO₂ 2025 vs national median</dt><dd>×1.11</dd></div><div class="fact"><dt>NO₂ change 2019 → 2025</dt><dd>+14% <span class='muted'>(-3% vs background)</span></dd></div><div class="fact"><dt>Surface changed 2017 → 2024</dt><dd>0.0% of 2 km radius</dd></div></dl>
+</article>
+</section>
+
+<section id="table">
+  <h2 class="col">EDGAR top 20 clusters</h2>
+  <p class="col">Clusters of 1 km pixels above 3,300 t/km²/yr, the threshold above which pixels together hold half the national total. Rows 11–20 not in the atlas include the Kaduna refinery (row 11), Geregu power (12), Onitsha (13) and Abuja (18).</p>
+  <div class="tbl"><table><thead><tr><th>#</th><th>State</th><th>Centroid</th><th>Mt CO₂</th><th>Share</th><th>km²</th><th>Dominant sector</th><th>0.1° trend 2005/15/25 (Mt)</th><th>Largest Climate TRACE facility nearby</th></tr></thead><tbody><tr><td>1</td><td>Lagos</td><td class='num'>6.642, 3.332</td><td class='num'>12.24</td><td class='num'>9.7%</td><td class='num'>962</td><td>Industry</td><td class='num'>10.3 / 17.5 / 18.8</td><td>Dangote Cement Ojibawo Cement Plant</td></tr><tr><td>2</td><td>Rivers</td><td class='num'>4.835, 7.194</td><td class='num'>9.33</td><td class='num'>7.4%</td><td class='num'>616</td><td>Industry</td><td class='num'>8.9 / 11.8 / 16.6</td><td>Nigeria_Niger Delta_Conventional shelf</td></tr><tr><td>3</td><td>Kogi</td><td class='num'>7.950, 6.450</td><td class='num'>6.13</td><td class='num'>4.8%</td><td class='num'>100</td><td>Industry</td><td class='num'>0.7 / 4.4 / 6.5</td><td>Dangote Cement Obajana Cement Plant</td></tr><tr><td>4</td><td>Rivers</td><td class='num'>4.449, 7.151</td><td class='num'>5.39</td><td class='num'>4.3%</td><td class='num'>100</td><td>Energy</td><td class='num'>2.4 / 4.4 / 7.0</td><td>Bonny</td></tr><tr><td>5</td><td>Kano</td><td class='num'>11.980, 8.526</td><td class='num'>2.30</td><td class='num'>1.8%</td><td class='num'>310</td><td>Transport</td><td class='num'>2.3 / 3.4 / 4.1</td><td>Mallam Aminu Kano International Airport</td></tr><tr><td>6</td><td>Ogun</td><td class='num'>7.048, 3.050</td><td class='num'>1.98</td><td class='num'>1.6%</td><td class='num'>101</td><td>Industry</td><td class='num'>0.3 / 1.6 / 2.3</td><td>Dangote Cement Ojibawo Cement Plant</td></tr><tr><td>7</td><td>Delta</td><td class='num'>5.529, 5.858</td><td class='num'>1.74</td><td class='num'>1.4%</td><td class='num'>113</td><td>Industry</td><td class='num'>3.2 / 2.5 / 2.6</td><td>Ughelli power station</td></tr><tr><td>8</td><td>Benue</td><td class='num'>7.450, 8.950</td><td class='num'>1.71</td><td class='num'>1.3%</td><td class='num'>100</td><td>Industry</td><td class='num'>0.2 / 1.3 / 1.9</td><td>Dangote Cement Gboko Cement Plant</td></tr><tr><td>9</td><td>Cross River</td><td class='num'>5.050, 8.549</td><td class='num'>1.56</td><td class='num'>1.2%</td><td class='num'>100</td><td>Industry</td><td class='num'>0.2 / 1.2 / 1.7</td><td>Lafarge Africa Mfamosing Cement Plant</td></tr><tr><td>10</td><td>Delta</td><td class='num'>5.930, 5.639</td><td class='num'>1.40</td><td class='num'>1.1%</td><td class='num'>107</td><td>Energy</td><td class='num'>2.9 / 2.8 / 1.9</td><td>Sapele power station</td></tr><tr><td>11</td><td>Kaduna</td><td class='num'>10.503, 7.438</td><td class='num'>1.36</td><td class='num'>1.1%</td><td class='num'>155</td><td>Industry</td><td class='num'>1.7 / 1.8 / 1.8</td><td>Kaduna International Airport</td></tr><tr><td>12</td><td>Kogi</td><td class='num'>7.505, 6.677</td><td class='num'>1.11</td><td class='num'>0.9%</td><td class='num'>25</td><td>Industry</td><td class='num'>0.9 / 2.2 / 1.4</td><td>Geregu II power station</td></tr><tr><td>13</td><td>Anambra</td><td class='num'>6.074, 6.861</td><td class='num'>1.08</td><td class='num'>0.9%</td><td class='num'>193</td><td>Transport</td><td class='num'>3.6 / 3.2 / 4.0</td><td>Oando Kwale power station</td></tr><tr><td>14</td><td>Cross River</td><td class='num'>4.969, 8.344</td><td class='num'>0.84</td><td class='num'>0.7%</td><td class='num'>118</td><td>Industry</td><td class='num'>0.3 / 0.7 / 1.0</td><td>Esuk Utan</td></tr><tr><td>15</td><td>Edo</td><td class='num'>6.378, 5.656</td><td class='num'>0.79</td><td class='num'>0.6%</td><td class='num'>52</td><td>Energy</td><td class='num'>0.4 / 1.1 / 1.3</td><td>Azura-Edo IPP power station</td></tr><tr><td>16</td><td>Kaduna</td><td class='num'>9.495, 7.695</td><td class='num'>0.69</td><td class='num'>0.5%</td><td class='num'>1</td><td>Industry</td><td class='num'>0.0 / 0.0 / 0.7</td><td>—</td></tr><tr><td>17</td><td>Rivers</td><td class='num'>5.115, 6.488</td><td class='num'>0.69</td><td class='num'>0.5%</td><td class='num'>57</td><td>Industry</td><td class='num'>3.3 / 1.8 / 1.9</td><td>Nigeria_Niger Delta_Conventional onshore</td></tr><tr><td>18</td><td>Abuja</td><td class='num'>9.078, 7.399</td><td class='num'>0.69</td><td class='num'>0.5%</td><td class='num'>122</td><td>Transport</td><td class='num'>1.0 / 1.5 / 1.8</td><td>Nnamdi Azikiwe International Airport</td></tr><tr><td>19</td><td>Oyo</td><td class='num'>7.394, 3.935</td><td class='num'>0.63</td><td class='num'>0.5%</td><td class='num'>117</td><td>Transport</td><td class='num'>0.8 / 1.2 / 1.4</td><td>Ibadan Airport</td></tr><tr><td>20</td><td>Gombe</td><td class='num'>10.949, 11.451</td><td class='num'>0.55</td><td class='num'>0.4%</td><td class='num'>100</td><td>Industry</td><td class='num'>0.1 / 0.5 / 0.7</td><td>Lafarge Africa Ashaka Cement Plant</td></tr></tbody></table></div>
+</section>
+
+<section id="method" class="col">
+  <h2>Method and limits</h2>
+  <p><b>The linked script.</b> The Earth Engine link contains Google's Satellite Embedding (AlphaEarth) k-means example. It samples 500 pixels of the 64-band annual embedding, trains <code>wekaKMeans</code> for k = 2 to 50, and maps the clusters. Its drawn region is a rectangle in Iowa (−93.1°, 42.3°), and it holds no CO₂ data. Embeddings describe what a surface looks like, not what it emits. So I kept the method for characterising and change-dating each hotspot, and located the hotspots with emission data.</p>
+  <p><b>Emissions.</b> EDGAR 2025 GHG 1 km grid for 2024, all six sectors, which sums to 126.7 Mt for Nigeria. The 0.1° grids for 2005, 2015 and 2025 give trends; units are tonnes per year, checked against the national total. Climate TRACE v6 provides 2024 facility estimates for 15,829 Nigerian assets, of which 259 are point sources.</p>
+  <p><b>Satellite checks.</b> Sentinel-5P tropospheric NO₂, annual means for 2019 and 2025, inside a 5 km radius against the national median. The national median itself rose 16.5% over that period, partly from processor upgrades, so a site's growth is read against that background. MODIS fire (FIRMS) detection days give the flares. Sentinel-2 (Cloud Score+ masked median of the 20 clearest scenes) and Landsat 7 (pre-SLC-failure, 1999–2003) give the imagery.</p>
+  <p><b>Not covered.</b> Satellites cannot yet map CO₂ itself at facility scale over Nigeria. OCO-2/3 sample narrow tracks, and a plant's plume is under 1% of the column. Land-use and fire CO₂ are outside this fossil-CO₂ analysis. Climate TRACE puts forest and savanna fires alone near 100 Mt CO₂ in 2024, so they deserve a separate study.</p>
+</section>
+
+<section id="earth" class="col">
+  <h2>Google Earth Pro file</h2>
+  <p><a href="downloads/Nigeria_CO2_Hotspots.kmz"><code>Nigeria_CO2_Hotspots.kmz</code></a> has every hotspot with three camera views: latest, ~2015 and ~2005. Each view carries a date that sets Earth Pro's historical-imagery slider. It also includes both flare layers and the EDGAR 1 km overlay, which is off by default. Turn on <b>View ▸ Historical Imagery</b> first, then double-click a view to fly there at that date.</p>
+</section>
+</div>
+
+</body>
+</html>

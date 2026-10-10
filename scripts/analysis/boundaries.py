@@ -1,0 +1,8 @@
+import os, certifi, json; os.environ["SSL_CERT_FILE"]=certifi.where()
+import ee; ee.Initialize(project=os.environ['GOOGLE_CLOUD_PROJECT'])
+g=ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level1').filter(ee.Filter.eq('ADM0_NAME','Nigeria'))
+fc=g.map(lambda f: ee.Feature(f).simplify(500).select(['ADM1_NAME']))
+json.dump(fc.getInfo(), open('data/nga_states.geojson','w'))
+n=ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_na','Nigeria')).map(lambda f: ee.Feature(f).simplify(300))
+json.dump(n.getInfo(), open('data/nga_country.geojson','w'))
+print('ok')

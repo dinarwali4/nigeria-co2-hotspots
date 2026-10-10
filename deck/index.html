@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nigeria CO₂ Hotspots · Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{--ink:#0f1720;--panel:#18232e;--paper:#f2efe8;--muted:#b8c4cc;--accent:#e8692c;--rule:#2a3642}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.5 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;padding:20px 24px 12px;max-width:1400px;margin:0 auto}
+h1{font:800 clamp(1.4rem,3vw,2rem)/1.1 Archivo,Arial,sans-serif;margin:0}
+.by{font:500 .8rem "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+nav a{font:500 .85rem "IBM Plex Mono",monospace;margin-left:16px;text-decoration:none}
+main{max-width:1400px;margin:0 auto;padding:0 24px 40px}
+.stage{position:relative;background:#000;border-radius:8px;overflow:hidden;aspect-ratio:16/9}
+.stage img{display:block;width:100%;height:100%;object-fit:contain}
+.ctl{display:flex;align-items:center;gap:12px;margin:14px 0}
+button{font:600 .95rem "IBM Plex Sans",sans-serif;background:var(--panel);color:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:8px 16px;cursor:pointer}
+button:hover,button:focus-visible{border-color:var(--accent);outline:none}
+.count{font:500 .9rem "IBM Plex Mono",monospace;color:var(--muted);min-width:7ch}
+.grow{flex:1}
+.notes{background:var(--panel);border-radius:8px;padding:16px 20px;color:var(--muted);max-width:90ch}
+.notes b{color:var(--paper)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-top:22px}
+.thumbs button{padding:0;border-radius:4px;overflow:hidden;border:2px solid transparent;background:none}
+.thumbs button[aria-current="true"]{border-color:var(--accent)}
+.thumbs img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.hint{font-size:.85rem;color:var(--muted)}
+@media (max-width:600px){nav a{margin:0 12px 0 0}.ctl{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>Nigeria CO₂ Hotspots</h1><div class="by">Presentation · 44 slides · prepared by Dinar Wali</div></div>
+  <nav><a href="../">Report</a><a href="../atlas/">Earth atlas</a><a href="../downloads/Nigeria_CO2_Hotspots_Unified_Dinar_Wali.pdf">PDF</a><a href="../downloads/Nigeria_CO2_Hotspots_Unified_Dinar_Wali.pptx">PPTX</a></nav>
+</header>
+<main>
+  <div class="stage"><img id="slide" src="slides/01.jpg" alt="Slide 1"></div>
+  <div class="ctl">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+    <span class="count" id="count">1 / 44</span>
+    <span class="grow"></span>
+    <button id="fs" type="button">Full screen</button>
+  </div>
+  <div class="notes" id="notes"><b>Speaker notes.</b> Loading…</div>
+  <p class="hint">Use ← → keys to move between slides. Click a thumbnail to jump.</p>
+  <div class="thumbs" id="thumbs"></div>
+</main>
+<script>
+let S=[],i=0;
+const img=document.getElementById('slide'),cnt=document.getElementById('count'),nt=document.getElementById('notes'),th=document.getElementById('thumbs');
+const pad=n=>String(n).padStart(2,'0');
+function show(k){
+  if(!S.length)return; i=(k+S.length)%S.length;
+  img.src='slides/'+pad(S[i].n)+'.jpg'; img.alt='Slide '+S[i].n;
+  cnt.textContent=S[i].n+' / '+S.length;
+  nt.innerHTML='<b>Speaker notes.</b> '; nt.append(S[i].notes||'');
+  th.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-current',j===i));
+  (new Image()).src='slides/'+pad(S[(i+1)%S.length].n)+'.jpg';
+  try{history.replaceState(null,'','#'+S[i].n)}catch(e){}
+}
+fetch('slides.json').then(r=>r.json()).then(d=>{
+  S=d;
+  S.forEach((s,j)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+s.n);
+    const t=document.createElement('img');t.loading='lazy';t.src='slides/'+pad(s.n)+'.jpg';t.alt='';b.append(t);b.onclick=()=>show(j);th.append(b)});
+  const h=parseInt(location.hash.slice(1));show(h>0&&h<=S.length?h-1:0);
+});
+document.getElementById('prev').onclick=()=>show(i-1);
+document.getElementById('next').onclick=()=>show(i+1);
+document.getElementById('fs').onclick=()=>{const s=document.querySelector('.stage');(s.requestFullscreen||s.webkitRequestFullscreen||(()=>{})).call(s)};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();show(i+1)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(i-1)}});
+</script>
+</body>
+</html>

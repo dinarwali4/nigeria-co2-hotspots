@@ -1,0 +1,949 @@
+[
+ {
+  "id": "H01",
+  "name": "Egbin power station, Ikorodu (Lagos)",
+  "sub": "Lagos metro cluster 12.2 Mt CO₂/yr (EDGAR 2024) · Egbin 2.06 Mt (Climate TRACE) · 1,320 MW gas-fired",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 8 Feb 2024",
+    "labels": [
+     {
+      "fx": 0.47,
+      "fy": 0.46,
+      "dx": 0.1,
+      "dy": 0.22,
+      "t": "Egbin power station",
+      "s": "gas-fired steam units"
+     },
+     {
+      "fx": 0.38,
+      "fy": 0.36,
+      "dx": -0.12,
+      "dy": -0.14,
+      "t": "Fuel / gas storage tanks"
+     },
+     {
+      "fx": 0.47,
+      "fy": 0.33,
+      "dx": 0.12,
+      "dy": -0.16,
+      "t": "Switchyard"
+     },
+     {
+      "fx": 0.62,
+      "fy": 0.8,
+      "dx": 0.0,
+      "dy": 0.0001,
+      "t": "Lagos Lagoon"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 2 May 2013",
+    "labels": [
+     {
+      "fx": 0.4,
+      "fy": 0.4,
+      "dx": 0.12,
+      "dy": 0.24,
+      "t": "Egbin power station",
+      "s": "operating since the 1980s"
+     },
+     {
+      "fx": 0.34,
+      "fy": 0.34,
+      "dx": -0.1,
+      "dy": -0.16,
+      "t": "Fuel / gas storage tanks"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H02",
+  "name": "Dangote Petroleum Refinery, Lekki Free Zone",
+  "sub": "2.65 Mt CO₂ in 2024 (Climate TRACE) · 650,000 bbl/day · not yet in EDGAR's 1 km grid",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 20 Nov 2024",
+    "labels": [
+     {
+      "fx": 0.22,
+      "fy": 0.3,
+      "dx": -0.05,
+      "dy": 0.24,
+      "t": "Crude oil tank farm"
+     },
+     {
+      "fx": 0.36,
+      "fy": 0.05,
+      "dx": 0.08,
+      "dy": 0.16,
+      "t": "Process units",
+      "s": "white plumes = steam / cloud"
+     },
+     {
+      "fx": 0.66,
+      "fy": 0.4,
+      "dx": 0.12,
+      "dy": 0.3,
+      "t": "Product storage tanks"
+     },
+     {
+      "fx": 0.3,
+      "fy": 0.62,
+      "dx": -0.1,
+      "dy": 0.2,
+      "t": "Pipe racks / laydown yards"
+     },
+     {
+      "fx": 0.62,
+      "fy": 0.665,
+      "dx": -0.06,
+      "dy": 0.2,
+      "t": "Lekki Free Zone road"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 17 Dec 2013",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.5,
+      "dx": 0.0,
+      "dy": 0.18,
+      "t": "Future refinery site",
+      "s": "forest and swamp, no works yet"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H03",
+  "name": "Port Harcourt – Onne – Eleme industrial belt",
+  "sub": "EDGAR cluster 9.3 Mt CO₂/yr · Port Harcourt Fertilizer 3.15 Mt, Onne 1.64 Mt (Climate TRACE) · highest NO₂ (×2.34)",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 30 May 2025",
+    "labels": [
+     {
+      "fx": 0.55,
+      "fy": 0.14,
+      "dx": 0.14,
+      "dy": 0.12,
+      "t": "Industrial complexes",
+      "s": "tanks and process plant"
+     },
+     {
+      "fx": 0.15,
+      "fy": 0.4,
+      "dx": 0.05,
+      "dy": 0.28,
+      "t": "Port Harcourt city"
+     },
+     {
+      "fx": 0.7,
+      "fy": 0.75,
+      "dx": 0.12,
+      "dy": 0.08,
+      "t": "Eleme / Oyigbo settlements"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 20 Dec 2013",
+    "labels": [
+     {
+      "fx": 0.55,
+      "fy": 0.13,
+      "dx": 0.14,
+      "dy": 0.12,
+      "t": "Industrial complexes"
+     },
+     {
+      "fx": 0.15,
+      "fy": 0.4,
+      "dx": 0.05,
+      "dy": 0.28,
+      "t": "Port Harcourt city"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H04",
+  "name": "Bonny Island – Nigeria LNG",
+  "sub": "EDGAR cluster 5.4 Mt CO₂/yr in 100 km² · LNG trains, power plant and export terminal",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 10 Dec 2021",
+    "labels": [
+     {
+      "fx": 0.58,
+      "fy": 0.33,
+      "dx": -0.2,
+      "dy": -0.1,
+      "t": "LNG storage tanks / trains"
+     },
+     {
+      "fx": 0.34,
+      "fy": 0.82,
+      "dx": -0.14,
+      "dy": -0.08,
+      "t": "Export terminal tanks"
+     },
+     {
+      "fx": 0.36,
+      "fy": 0.58,
+      "dx": -0.14,
+      "dy": 0.04,
+      "t": "Loading jetty"
+     },
+     {
+      "fx": 0.85,
+      "fy": 0.88,
+      "dx": 0.0,
+      "dy": -0.08,
+      "t": "Bonny airstrip"
+     },
+     {
+      "fx": 0.65,
+      "fy": 0.68,
+      "dx": 0.12,
+      "dy": 0.0001,
+      "t": "Cloud cover in this scene"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 13 Jan 2014",
+    "labels": [
+     {
+      "fx": 0.6,
+      "fy": 0.34,
+      "dx": 0.16,
+      "dy": -0.14,
+      "t": "LNG storage tanks"
+     },
+     {
+      "fx": 0.57,
+      "fy": 0.56,
+      "dx": 0.18,
+      "dy": 0.12,
+      "t": "LNG process trains",
+      "s": "gas treatment, liquefaction"
+     },
+     {
+      "fx": 0.41,
+      "fy": 0.43,
+      "dx": -0.16,
+      "dy": -0.12,
+      "t": "Loading jetties"
+     },
+     {
+      "fx": 0.31,
+      "fy": 0.82,
+      "dx": -0.12,
+      "dy": -0.1,
+      "t": "Oil export terminal tanks"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H05",
+  "name": "Obajana Cement (Dangote), Kogi",
+  "sub": "6.1 Mt CO₂/yr (EDGAR 2024) · Africa's largest cement plant · built after 2002",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 13 Dec 2024",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.5,
+      "dx": -0.22,
+      "dy": 0.1,
+      "t": "Production lines (kilns, mills)",
+      "s": "main CO₂ source: fuel + limestone"
+     },
+     {
+      "fx": 0.46,
+      "fy": 0.24,
+      "dx": -0.18,
+      "dy": -0.1,
+      "t": "Raw-material / coal stores"
+     },
+     {
+      "fx": 0.47,
+      "fy": 0.65,
+      "dx": -0.14,
+      "dy": 0.18,
+      "t": "Storage sheds"
+     },
+     {
+      "fx": 0.53,
+      "fy": 0.31,
+      "dx": 0.14,
+      "dy": -0.1,
+      "t": "Water reservoir"
+     },
+     {
+      "fx": 0.73,
+      "fy": 0.15,
+      "dx": 0.12,
+      "dy": 0.08,
+      "t": "Plant airstrip"
+     },
+     {
+      "fx": 0.7,
+      "fy": 0.72,
+      "dx": 0.12,
+      "dy": 0.1,
+      "t": "Obajana town"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 18 Nov 2011",
+    "labels": [
+     {
+      "fx": 0.48,
+      "fy": 0.52,
+      "dx": -0.2,
+      "dy": 0.16,
+      "t": "First production lines",
+      "s": "plant at about one-third of today's size"
+     },
+     {
+      "fx": 0.52,
+      "fy": 0.34,
+      "dx": -0.16,
+      "dy": -0.14,
+      "t": "Water reservoir"
+     },
+     {
+      "fx": 0.66,
+      "fy": 0.68,
+      "dx": 0.14,
+      "dy": 0.12,
+      "t": "Obajana town (smaller)"
+     },
+     {
+      "fx": 0.7,
+      "fy": 0.18,
+      "dx": 0.12,
+      "dy": 0.1,
+      "t": "Airstrip"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H06",
+  "name": "BUA Okpotu Cement, Benue",
+  "sub": "2.83 Mt CO₂/yr (Climate TRACE) · missing from EDGAR's grid · NO₂ +45% since 2019",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 1 Mar 2025",
+    "labels": [
+     {
+      "fx": 0.47,
+      "fy": 0.55,
+      "dx": -0.2,
+      "dy": 0.2,
+      "t": "Cement plant (kiln lines)"
+     },
+     {
+      "fx": 0.7,
+      "fy": 0.4,
+      "dx": 0.14,
+      "dy": 0.12,
+      "t": "Limestone quarry"
+     },
+     {
+      "fx": 0.45,
+      "fy": 0.32,
+      "dx": -0.16,
+      "dy": -0.14,
+      "t": "Quarry / stockpile area"
+     },
+     {
+      "fx": 0.57,
+      "fy": 0.23,
+      "dx": 0.12,
+      "dy": -0.12,
+      "t": "Quarry ponds"
+     },
+     {
+      "fx": 0.2,
+      "fy": 0.38,
+      "dx": -0.06,
+      "dy": -0.16,
+      "t": "Okpotu village"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 23 Nov 2006",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.5,
+      "dx": 0.0,
+      "dy": 0.18,
+      "t": "No plant yet",
+      "s": "woodland; low-resolution Landsat only"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H07",
+  "name": "Ibese Cement (Dangote), Ogun",
+  "sub": "2.2 Mt CO₂/yr (Climate TRACE) · 2.0 Mt EDGAR cluster · NO₂ ×2.28 national median",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 21 Jan 2026",
+    "labels": [
+     {
+      "fx": 0.48,
+      "fy": 0.45,
+      "dx": 0.18,
+      "dy": -0.16,
+      "t": "Kiln lines & cement mills"
+     },
+     {
+      "fx": 0.25,
+      "fy": 0.7,
+      "dx": 0.1,
+      "dy": -0.28,
+      "t": "Limestone quarries"
+     },
+     {
+      "fx": 0.58,
+      "fy": 0.75,
+      "dx": 0.12,
+      "dy": 0.14,
+      "t": "Quarry benches"
+     },
+     {
+      "fx": 0.35,
+      "fy": 0.22,
+      "dx": -0.14,
+      "dy": -0.1,
+      "t": "Staff housing"
+     },
+     {
+      "fx": 0.68,
+      "fy": 0.48,
+      "dx": 0.14,
+      "dy": 0.08,
+      "t": "Flooded pit"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 19 Jan 2014",
+    "labels": [
+     {
+      "fx": 0.48,
+      "fy": 0.45,
+      "dx": 0.18,
+      "dy": -0.14,
+      "t": "Kiln lines (before expansion)"
+     },
+     {
+      "fx": 0.3,
+      "fy": 0.82,
+      "dx": -0.06,
+      "dy": 0.0001,
+      "t": "Haze over quarry area"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H08",
+  "name": "BUA Sokoto Cement, Kalambaina",
+  "sub": "2.36 Mt CO₂/yr (Climate TRACE) · the far north's largest point source · under-allocated by EDGAR",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 30 Mar 2025",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.44,
+      "dx": -0.22,
+      "dy": -0.2,
+      "t": "Kiln lines"
+     },
+     {
+      "fx": 0.47,
+      "fy": 0.58,
+      "dx": -0.22,
+      "dy": 0.06,
+      "t": "Clinker / cement storage"
+     },
+     {
+      "fx": 0.53,
+      "fy": 0.73,
+      "dx": 0.16,
+      "dy": 0.1,
+      "t": "Coal / fuel stockyard",
+      "s": "dark ground"
+     },
+     {
+      "fx": 0.45,
+      "fy": 0.88,
+      "dx": -0.18,
+      "dy": 0.0001,
+      "t": "Limestone quarry"
+     },
+     {
+      "fx": 0.85,
+      "fy": 0.35,
+      "dx": 0.0,
+      "dy": -0.16,
+      "t": "Sokoto city edge"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 27 Sep 2013",
+    "labels": [
+     {
+      "fx": 0.48,
+      "fy": 0.41,
+      "dx": -0.2,
+      "dy": -0.14,
+      "t": "Older, smaller plant",
+      "s": "before the new kiln lines"
+     },
+     {
+      "fx": 0.55,
+      "fy": 0.82,
+      "dx": 0.16,
+      "dy": 0.06,
+      "t": "Limestone quarry"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H09",
+  "name": "Kano metro",
+  "sub": "2.3 Mt CO₂/yr EDGAR cluster over 310 km² · transport-dominated · 2.3 → 4.1 Mt (2005 → 2025)",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 7 May 2025",
+    "labels": [
+     {
+      "fx": 0.35,
+      "fy": 0.78,
+      "dx": 0.14,
+      "dy": -0.22,
+      "t": "Industrial estate",
+      "s": "factories and warehouses"
+     },
+     {
+      "fx": 0.65,
+      "fy": 0.2,
+      "dx": 0.14,
+      "dy": 0.1,
+      "t": "Dense urban core"
+     },
+     {
+      "fx": 0.55,
+      "fy": 0.45,
+      "dx": 0.16,
+      "dy": 0.1,
+      "t": "Arterial roads",
+      "s": "traffic = half the CO₂"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H10",
+  "name": "Ughelli power station, Delta",
+  "sub": "1.81 Mt CO₂/yr (Climate TRACE) · persistent gas flares nearby",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 6 May 2024",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.45,
+      "dx": -0.2,
+      "dy": -0.14,
+      "t": "Ughelli power station",
+      "s": "gas turbines"
+     },
+     {
+      "fx": 0.66,
+      "fy": 0.36,
+      "dx": 0.12,
+      "dy": -0.16,
+      "t": "Second industrial compound"
+     },
+     {
+      "fx": 0.76,
+      "fy": 0.48,
+      "dx": 0.12,
+      "dy": 0.2,
+      "t": "Sand-dredging ponds"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 15 Jan 2011",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.42,
+      "dx": -0.2,
+      "dy": -0.14,
+      "t": "Ughelli power station"
+     },
+     {
+      "fx": 0.66,
+      "fy": 0.38,
+      "dx": 0.12,
+      "dy": -0.16,
+      "t": "Second industrial compound"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H11",
+  "name": "Azura-Edo & Ihovbor power, Benin City",
+  "sub": "Azura-Edo 2.12 Mt + Ihovbor 0.60 Mt CO₂/yr (Climate TRACE) · gas-fired",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 6 May 2024",
+    "labels": [
+     {
+      "fx": 0.49,
+      "fy": 0.4,
+      "dx": -0.22,
+      "dy": -0.08,
+      "t": "Azura-Edo IPP",
+      "s": "461 MW, built 2016–18"
+     },
+     {
+      "fx": 0.6,
+      "fy": 0.62,
+      "dx": 0.18,
+      "dy": 0.1,
+      "t": "Ihovbor power plant",
+      "s": "site cleared by 2013"
+     },
+     {
+      "fx": 0.25,
+      "fy": 0.6,
+      "dx": -0.06,
+      "dy": 0.2,
+      "t": "Benin City suburbs"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 5 Feb 2013",
+    "labels": [
+     {
+      "fx": 0.53,
+      "fy": 0.57,
+      "dx": 0.18,
+      "dy": 0.14,
+      "t": "Cleared site",
+      "s": "Ihovbor plant under construction"
+     },
+     {
+      "fx": 0.47,
+      "fy": 0.4,
+      "dx": -0.18,
+      "dy": -0.1,
+      "t": "Future Azura-Edo site: bush"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H12",
+  "name": "Gboko Cement (Dangote), Benue",
+  "sub": "1.7 Mt CO₂/yr EDGAR cluster · 1.18 Mt (Climate TRACE) · NO₂ +31% since 2019",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 18 Nov 2025",
+    "labels": [
+     {
+      "fx": 0.53,
+      "fy": 0.42,
+      "dx": 0.18,
+      "dy": -0.16,
+      "t": "Kiln lines & preheater towers"
+     },
+     {
+      "fx": 0.45,
+      "fy": 0.47,
+      "dx": -0.18,
+      "dy": -0.06,
+      "t": "Clinker silos"
+     },
+     {
+      "fx": 0.55,
+      "fy": 0.75,
+      "dx": -0.2,
+      "dy": 0.1,
+      "t": "Flooded limestone quarry"
+     },
+     {
+      "fx": 0.45,
+      "fy": 0.15,
+      "dx": -0.16,
+      "dy": 0.0001,
+      "t": "Gboko town"
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 5 Jan 2014",
+    "labels": [
+     {
+      "fx": 0.53,
+      "fy": 0.43,
+      "dx": 0.18,
+      "dy": -0.14,
+      "t": "Plant before expansion"
+     },
+     {
+      "fx": 0.48,
+      "fy": 0.72,
+      "dx": -0.2,
+      "dy": 0.1,
+      "t": "Limestone quarry"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H13",
+  "name": "Mfamosing Cement (Lafarge), Cross River",
+  "sub": "1.6 Mt CO₂/yr EDGAR cluster · 1.13 Mt (Climate TRACE) · NO₂ +36% since 2019",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 3 May 2022",
+    "labels": [
+     {
+      "fx": 0.48,
+      "fy": 0.5,
+      "dx": -0.2,
+      "dy": 0.18,
+      "t": "Kiln lines & stacks"
+     },
+     {
+      "fx": 0.78,
+      "fy": 0.14,
+      "dx": 0.0,
+      "dy": 0.2,
+      "t": "Limestone quarry (open pit)"
+     },
+     {
+      "fx": 0.42,
+      "fy": 0.36,
+      "dx": -0.16,
+      "dy": -0.14,
+      "t": "Stockyard"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H14",
+  "name": "Persistent fire cluster, Ogba/Egbema area",
+  "sub": "Largest MODIS persistent-fire cluster 2024–25: 19 km², fire on up to 229 of 730 days",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 30 Dec 2022",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.48,
+      "dx": -0.22,
+      "dy": -0.14,
+      "t": "Most persistent fire pixel (±0.5 km)",
+      "s": "no flare stack visible in this scene"
+     },
+     {
+      "fx": 0.92,
+      "fy": 0.62,
+      "dx": -0.04,
+      "dy": 0.18,
+      "t": "River channel"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H15",
+  "name": "Gas-flare site, Delta/Edo border",
+  "sub": "Largest flare site 2014–15 (fire on 255 of 730 days) · still 2nd in 2024–25 (225 days)",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 30 Nov 2024",
+    "labels": [
+     {
+      "fx": 0.45,
+      "fy": 0.4,
+      "dx": 0.2,
+      "dy": -0.16,
+      "t": "Flow station / gas plant"
+     },
+     {
+      "fx": 0.38,
+      "fy": 0.4,
+      "dx": -0.16,
+      "dy": 0.2,
+      "t": "Scorched flare pits",
+      "s": "orange burnt ground"
+     },
+     {
+      "fx": 0.18,
+      "fy": 0.24,
+      "dx": -0.04,
+      "dy": -0.14,
+      "t": "Well pads"
+     },
+     {
+      "fx": 0.55,
+      "fy": 0.67,
+      "dx": 0.18,
+      "dy": 0.14,
+      "t": "Well pad"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "H16",
+  "name": "Rejected candidate, southern Kaduna",
+  "sub": "EDGAR places 0.69 Mt in one 1 km pixel (2025 only) · no plant, NO₂ at background, no Climate TRACE facility",
+  "shots": [
+   {
+    "tag": "latest",
+    "when": "Imagery 20 Sep 2023",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.5,
+      "dx": 0.18,
+      "dy": 0.2,
+      "t": "EDGAR 0.69 Mt pixel",
+      "s": "houses and farmland only"
+     }
+    ],
+    "polys": [
+     {
+      "pts": [
+       [
+        9.49,
+        7.69
+       ],
+       [
+        9.49,
+        7.7
+       ],
+       [
+        9.5,
+        7.7
+       ],
+       [
+        9.5,
+        7.69
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "tag": "hist2013",
+    "when": "Imagery 7 Nov 2011",
+    "labels": [
+     {
+      "fx": 0.5,
+      "fy": 0.55,
+      "dx": 0.18,
+      "dy": 0.18,
+      "t": "Same town in 2011",
+      "s": "no industry then or now"
+     }
+    ],
+    "polys": [
+     {
+      "pts": [
+       [
+        9.49,
+        7.69
+       ],
+       [
+        9.49,
+        7.7
+       ],
+       [
+        9.5,
+        7.7
+       ],
+       [
+        9.5,
+        7.69
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,18 @@
+[
+ {"id":"H01","name":"Lagos metro – Egbin power station / Ikorodu","state":"Lagos","lat":6.564,"lon":3.615,"type":"Urban + power","edgar_cluster":1},
+ {"id":"H02","name":"Dangote Petroleum Refinery, Lekki FTZ","state":"Lagos","lat":6.455,"lon":3.999,"type":"Refinery (new 2024)","edgar_cluster":null},
+ {"id":"H03","name":"Port Harcourt – Onne – Eleme industrial belt","state":"Rivers","lat":4.835,"lon":7.103,"type":"Fertiliser + refinery + power","edgar_cluster":2},
+ {"id":"H04","name":"Bonny Island – NLNG","state":"Rivers","lat":4.43,"lon":7.16,"type":"LNG + gas","edgar_cluster":4},
+ {"id":"H05","name":"Obajana Cement (Dangote)","state":"Kogi","lat":7.929,"lon":6.422,"type":"Cement","edgar_cluster":3},
+ {"id":"H06","name":"BUA Okpotu Cement","state":"Benue","lat":7.355,"lon":6.402,"type":"Cement","edgar_cluster":null},
+ {"id":"H07","name":"Ibese Cement (Dangote), Ogun","state":"Ogun","lat":7.006,"lon":3.050,"type":"Cement","edgar_cluster":6},
+ {"id":"H08","name":"BUA Sokoto Cement (Kalambaina)","state":"Sokoto","lat":13.059,"lon":5.172,"type":"Cement","edgar_cluster":null},
+ {"id":"H09","name":"Kano metro","state":"Kano","lat":11.98,"lon":8.526,"type":"Urban + industry","edgar_cluster":5},
+ {"id":"H10","name":"Ughelli power station","state":"Delta","lat":5.540,"lon":5.915,"type":"Gas power","edgar_cluster":7},
+ {"id":"H11","name":"Azura-Edo / Ihovbor power, Benin City","state":"Edo","lat":6.410,"lon":5.681,"type":"Gas power","edgar_cluster":15},
+ {"id":"H12","name":"Gboko Cement (Dangote)","state":"Benue","lat":7.411,"lon":8.974,"type":"Cement","edgar_cluster":8},
+ {"id":"H13","name":"Mfamosing Cement (Lafarge)","state":"Cross River","lat":5.064,"lon":8.515,"type":"Cement","edgar_cluster":9},
+ {"id":"H14","name":"Gas-flare cluster, Ogba/Egbema (largest 2024–25)","state":"Rivers","lat":5.517,"lon":6.681,"type":"Gas flaring","edgar_cluster":null},
+ {"id":"H15","name":"Gas-flare cluster, Delta/Edo border (largest 2014–15)","state":"Delta","lat":6.011,"lon":5.872,"type":"Gas flaring","edgar_cluster":null},
+ {"id":"H16","name":"Unexplained EDGAR point, southern Kaduna","state":"Kaduna","lat":9.495,"lon":7.695,"type":"Unverified","edgar_cluster":16}
+]

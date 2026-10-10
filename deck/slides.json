@@ -1,0 +1,222 @@
+[
+ {
+  "n": 1,
+  "id": "cover",
+  "notes": "Opening. This deck locates Nigeria's fossil-CO2 hotspots using the EDGAR 2025 emission grid and Climate TRACE facility estimates, then checks each one with satellite data: Sentinel-5P NO2, MODIS gas-flare persistence, Landsat and Sentinel-2 imagery, and Google's AlphaEarth embeddings. The background image is the Dangote refinery at Lekki, the newest large emitter in the country."
+ },
+ {
+  "n": 2,
+  "id": "numbers",
+  "notes": "Three numbers frame the problem. Nigeria emitted about 137.6 million tonnes of fossil CO2 in 2025, 58 percent more than in 2005. And the emissions are extremely concentrated: half of the total comes from just 4,425 square kilometres, about 0.57 percent of the country. That concentration is what makes a hotspot approach worthwhile."
+ },
+ {
+  "n": 3,
+  "id": "map",
+  "notes": "The map shows EDGAR's 1 kilometre fossil-CO2 grid for 2024 on a log scale. The 16 circles are the candidate hotspots. Two coastal clusters dominate, Lagos and the Port Harcourt to Bonny corridor. Inland, a belt of cement works stands out. The orange dots are 1 km pixels where the MODIS satellite saw fire on at least 60 of 730 days in 2024 and 2025, which identifies gas flares; they are all in the Niger Delta."
+ },
+ {
+  "n": 4,
+  "id": "ranking",
+  "notes": "Each site has two independent estimates: the EDGAR 1 km cluster, which counts everything in the area, and Climate TRACE's estimate for the largest single facility. The bar shows whichever is higher, coloured by its source. The orange bars matter: Okpotu, the Dangote refinery and Sokoto are big emitters that EDGAR's grid does not show at all. Satellite imagery confirms that all three exist and are operating."
+ },
+ {
+  "n": 5,
+  "id": "method",
+  "notes": "Four steps. First, locate clusters in EDGAR's 1 km CO2 grid, using the threshold above which pixels hold half of national emissions. Second, attribute them with Climate TRACE facility estimates. Third, map gas flares directly: savanna fires last days, so a pixel that burns for months is a flare. Fourth, verify every site from orbit: NO2 from Sentinel-5P, true-colour imagery from 2000 to 2026, and Google's AlphaEarth embeddings, which is the method in the original Earth Engine script."
+ },
+ {
+  "n": 6,
+  "id": "atlas-intro",
+  "notes": "This section brings in the Google Earth Pro atlas. For each hotspot there is a historical view, usually around 2013, and the latest view, with every visible feature labelled: kiln lines, quarries, tank farms, process units, flare pits and well pads. Each image carries a scale bar, a north arrow and the imagery provider. The atlas pages follow the story slide for the same site, so the deck moves from the inventory number to what is actually on the ground."
+ },
+ {
+  "n": 7,
+  "id": "coast",
+  "notes": "The coast carries the largest emissions. Lagos is a 962 square kilometre cluster of road transport, the Egbin gas plant and industry: 12.2 million tonnes. Port Harcourt, Onne and Eleme combine two fertiliser complexes, the refineries and the Afam power stations: 9.3 million tonnes, and the highest NO2 of any site, 2.3 times the national median. Bonny Island's LNG trains emit 5.4 million tonnes from only 100 square kilometres."
+ },
+ {
+  "n": 8,
+  "id": "ge-h01-then",
+  "notes": "Egbin power station on the Lagos Lagoon shore in May 2013. Labelled: the power station, operating since the 1980s, and its fuel and gas storage tanks. Egbin is a long-standing source: the plant was already here well before the 2005 baseline, and Climate TRACE puts it at 2.06 million tonnes of CO2 in 2024."
+ },
+ {
+  "n": 9,
+  "id": "ge-h01-now",
+  "notes": "Egbin in February 2024. Labelled: the power station's gas-fired steam units, the fuel and gas storage tanks, the switchyard, and the Lagos Lagoon. Egbin is the largest single point source inside the 12.2 million tonne Lagos metro cluster."
+ },
+ {
+  "n": 10,
+  "id": "ge-h03-then",
+  "notes": "Port Harcourt and the Eleme side in December 2013, in hazy Maxar imagery. Labelled: the industrial complexes north-east of the city, and Port Harcourt itself."
+ },
+ {
+  "n": 11,
+  "id": "ge-h03-now",
+  "notes": "The same area in May 2025. Labelled: the industrial complexes with tanks and process plant, Port Harcourt city, and the Eleme and Oyigbo settlements. The reported location of the Port Harcourt fertiliser complex lies just north of this frame. This cluster has the highest NO2 of any site, 2.34 times the national median."
+ },
+ {
+  "n": 12,
+  "id": "ge-h04-then",
+  "notes": "Bonny Island in January 2014, the clearest scene available. Labelled: the LNG storage tanks, the LNG process trains where gas is treated and liquefied, the loading jetties, and the oil export terminal tanks. The process trains are where most of the CO2 comes from: CO2 stripped from the feed gas plus fuel burned on site."
+ },
+ {
+  "n": 13,
+  "id": "ge-h04-now",
+  "notes": "The latest Google Earth scene for Bonny is from December 2021 and is partly under cloud. Labelled: the LNG storage tanks and trains, the export terminal tanks, the loading jetty, the Bonny airstrip, and the cloud cover itself. The 2014 slide before this one shows the plant layout more clearly."
+ },
+ {
+  "n": 14,
+  "id": "ge-h09-now",
+  "notes": "Kano in May 2025, the north's largest urban cluster. Labelled: an industrial estate of factories and warehouses, the dense urban core, and the arterial roads. Road transport is about half of this cluster's CO2, so the hotspot is spread across the city rather than one chimney. No usable historical frame: the 2013 scene had a stray path line across it."
+ },
+ {
+  "n": 15,
+  "id": "dangote",
+  "notes": "The clearest change in the whole study. In 2000 to 2002 the Lekki site was coastal bush. By 2016 and 2017 it was a sand-filled platform. By 2025 and 2026 it is a complete 650,000 barrel per day refinery with tank farms. Climate TRACE puts its 2024 emissions at 2.65 million tonnes, its first operating year. EDGAR's 1 km grid does not include it yet, so inventory-only maps miss it."
+ },
+ {
+  "n": 16,
+  "id": "ge-h02-then",
+  "notes": "The Dangote refinery site in December 2013: forest and swamp, with no works yet. This is the same frame as the next slide, eleven years earlier."
+ },
+ {
+  "n": 17,
+  "id": "ge-h02-now",
+  "notes": "The refinery in November 2024. Labelled: the crude oil tank farm, the process units with white plumes of steam or cloud above them, the product storage tanks, the pipe racks and laydown yards, and the Lekki Free Zone road. The process units are where the refinery's combustion CO2 is released."
+ },
+ {
+  "n": 18,
+  "id": "cement-rise",
+  "notes": "Cement is the fastest-growing source. None of these plants existed in the 2000 to 2002 Landsat imagery. Obajana, now Africa's largest cement plant, emits about 6.1 million tonnes. Okpotu's NO2 rose 45 percent between 2019 and 2025 and Mfamosing's 36 percent, against a national background rise of 16.5 percent, so they are growing faster than the country. Okpotu does not appear in EDGAR's grid at all."
+ },
+ {
+  "n": 19,
+  "id": "cement-grid",
+  "notes": "The six cement works together emit about 17 million tonnes, more than the Lagos metro cluster. Cement emits CO2 twice: from fuel burned in the kiln and from the limestone itself as it is calcined. That makes these plants hard to decarbonise and a priority for monitoring. Five of the six are owned by Dangote or BUA."
+ },
+ {
+  "n": 20,
+  "id": "ge-h05-then",
+  "notes": "Obajana in November 2011. Labelled: the first production lines, with the plant at about one-third of today's size, the water reservoir, a smaller Obajana town, and the airstrip."
+ },
+ {
+  "n": 21,
+  "id": "ge-h05-now",
+  "notes": "Obajana in December 2024. Labelled: the production lines (kilns and mills), which are the main CO2 source from fuel and from the limestone itself; the raw-material and coal stores; the storage sheds; the water reservoir; the plant airstrip; and Obajana town, now much larger."
+ },
+ {
+  "n": 22,
+  "id": "ge-h06-then",
+  "notes": "The Okpotu site in November 2006: woodland, no plant. Only low-resolution Landsat imagery is available for this date, but it is enough to show there was nothing industrial here."
+ },
+ {
+  "n": 23,
+  "id": "ge-h06-now",
+  "notes": "Okpotu in March 2025. Labelled: the cement plant with its kiln lines, the limestone quarry, the quarry and stockpile area, the quarry ponds, and Okpotu village. EDGAR's grid has no emissions here at all; Climate TRACE estimates 2.83 million tonnes, and NO2 rose 45 percent from 2019 to 2025."
+ },
+ {
+  "n": 24,
+  "id": "ge-h07-then",
+  "notes": "Ibese in January 2014. Labelled: the kiln lines before expansion, and haze over the quarry area. Harmattan haze is common in January imagery here."
+ },
+ {
+  "n": 25,
+  "id": "ge-h07-now",
+  "notes": "Ibese in January 2026, the most recent image in the atlas. Labelled: the kiln lines and cement mills, the limestone quarries, the quarry benches, the staff housing, and a flooded pit. The quarries have spread south since 2014."
+ },
+ {
+  "n": 26,
+  "id": "ge-h08-then",
+  "notes": "Kalambaina, Sokoto, in September 2013. Labelled: the older, smaller plant before the new kiln lines were built, and the limestone quarry."
+ },
+ {
+  "n": 27,
+  "id": "ge-h08-now",
+  "notes": "BUA Sokoto in March 2025. Labelled: the kiln lines, the clinker and cement storage, the coal or fuel stockyard on dark ground, the limestone quarry, and the edge of Sokoto city. Climate TRACE estimates 2.36 million tonnes, making it the largest point source in the far north."
+ },
+ {
+  "n": 28,
+  "id": "ge-h12-then",
+  "notes": "Gboko in January 2014. Labelled: the plant before expansion, and the limestone quarry with its flooded pit."
+ },
+ {
+  "n": 29,
+  "id": "ge-h12-now",
+  "notes": "Gboko in November 2025. Labelled: the kiln lines and preheater towers, the clinker silos, the flooded limestone quarry, now much larger, and Gboko town. NO2 here rose 31 percent between 2019 and 2025, above the national background."
+ },
+ {
+  "n": 30,
+  "id": "ge-h13-now",
+  "notes": "Mfamosing in May 2022. Labelled: the kiln lines and stacks, the open-pit limestone quarry, and the stockyard. Google Earth has only blurry Landsat imagery for this site before the plant, so there is no historical slide here; the Landsat before-and-after is on the cement slide earlier in the deck."
+ },
+ {
+  "n": 31,
+  "id": "power",
+  "notes": "Gas-fired power is the third group. Azura-Edo, near Benin City, was farmland in 2000 to 2002 and is now a 461 megawatt plant emitting about 2.1 million tonnes. Ughelli, in Delta State, emits about 1.8 million tonnes, and persistent gas flares from the surrounding oil fields sit just south-east of it."
+ },
+ {
+  "n": 32,
+  "id": "ge-h10-then",
+  "notes": "Ughelli in January 2011. Labelled: the Ughelli power station and a second industrial compound across the highway. Both were already here in 2011."
+ },
+ {
+  "n": 33,
+  "id": "ge-h10-now",
+  "notes": "Ughelli in May 2024. Labelled: the power station's gas turbines, the second industrial compound, and new sand-dredging ponds that appeared since 2011. Climate TRACE estimates 1.81 million tonnes for the power station."
+ },
+ {
+  "n": 34,
+  "id": "ge-h11-then",
+  "notes": "The Benin City site in February 2013. Labelled: a cleared red-earth pad where the Ihovbor plant was under construction, and the future Azura-Edo site, still bush. This frame is how the two plants in the next slide were told apart."
+ },
+ {
+  "n": 35,
+  "id": "ge-h11-now",
+  "notes": "The two plants in May 2024. Labelled: Azura-Edo, the 461 megawatt plant built in 2016 to 2018, to the north; Ihovbor, whose site was already cleared by 2013, to the south; and the Benin City suburbs that have grown around them. Together they emit about 2.7 million tonnes a year."
+ },
+ {
+  "n": 36,
+  "id": "flares",
+  "notes": "Flaring is Nigeria's best-known CO2 source, but the inventory places it badly. EDGAR distributes oil and gas emissions over coarse 0.1 degree blocks, the blue squares. The orange dots are 1 km pixels where MODIS saw fire on at least 60 of 730 days, which only a flare does. They mostly sit outside EDGAR's blocks. There are 23 such sites in 2024 and 2025. One caution: more detections than in 2014 and 2015 does not mean more flaring. MODIS overpass times changed, and World Bank figures show Nigerian flared volumes falling."
+ },
+ {
+  "n": 37,
+  "id": "ge-h14-now",
+  "notes": "The centre of the largest persistent-fire cluster, in December 2022. Labelled: the most persistent fire pixel, accurate to about half a kilometre, and a river channel. No flare stack is visible in this scene; the January 2014 scene also shows only forest. The fire record is real, but its source cannot be seen in Google Earth's imagery, so this site needs higher-resolution or night-time imagery."
+ },
+ {
+  "n": 38,
+  "id": "ge-h15-now",
+  "notes": "The H15 flare site in November 2024. Labelled: the flow station or gas plant, scorched flare pits visible as orange burnt ground, and the surrounding well pads. This is what a flare site looks like from above. It was the most persistent fire site in 2014 and 2015 and is still second in 2024 and 2025."
+ },
+ {
+  "n": 39,
+  "id": "embeddings",
+  "notes": "The linked Earth Engine script clusters Google's AlphaEarth satellite embeddings with k-means. Embeddings describe what a surface looks like, not what it emits, so I used them to characterise and date each hotspot. In the middle panel, eight clusters separate the tank farm, the process units, bare sand and vegetation. On the right, the dot product between the 2017 and 2024 embedding vectors shows where the surface changed: 58 percent of the area within 2 km of the refinery."
+ },
+ {
+  "n": 40,
+  "id": "kaduna",
+  "notes": "Checking every inventory hotspot against satellite data matters. EDGAR puts 0.69 million tonnes into one 1 km pixel in southern Kaduna, appearing only in its 2025 data. The Sentinel-2 image shows farmland and villages, the NO2 level is at the national background, and Climate TRACE lists no facility there. It is an allocation error in the inventory, and it is excluded from the hotspot list."
+ },
+ {
+  "n": 41,
+  "id": "ge-h16-then",
+  "notes": "The southern Kaduna point in November 2011, with EDGAR's 1 km pixel outlined in orange. It is the same small town as today, with no industry then or now."
+ },
+ {
+  "n": 42,
+  "id": "ge-h16-now",
+  "notes": "The same pixel in September 2023: houses and farmland only. Together with background NO2 and no Climate TRACE facility, this confirms the 0.69 million tonne point is an allocation error in EDGAR, and it is excluded from the hotspot list."
+ },
+ {
+  "n": 43,
+  "id": "limits",
+  "notes": "Three limits. First, CO2 itself is not measured: no satellite yet resolves a single plant's plume over Nigeria, so each hotspot is an inventory figure confirmed with NO2. Second, the change in flare detections is not a change in flared volume. Third, land-use and fire CO2, which Climate TRACE puts near 100 million tonnes, is outside this fossil-fuel analysis. Next steps: a monthly NO2 watch on the verified sites, high-resolution tasking over the flare sites, and direct plume measurement once the Copernicus CO2M mission is operating."
+ },
+ {
+  "n": 44,
+  "id": "close",
+  "notes": "Closing. Fifteen verified hotspots: the Lagos and Port Harcourt clusters, Bonny LNG, six cement works, the Dangote refinery, gas-fired power at Azura-Edo and Ughelli, Kano, and the Niger Delta flare sites. The full report, imagery for every site and a Google Earth Pro file with latest and historical views are available alongside this deck."
+ }
+]
